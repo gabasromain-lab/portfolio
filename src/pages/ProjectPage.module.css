@@ -1,0 +1,494 @@
+.page {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  background: #0a0a0c;
+}
+
+.page::-webkit-scrollbar { display: none; }
+.page { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Ambient */
+.ambientBg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: #0a0a0c;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: float 20s infinite ease-in-out alternate;
+}
+
+.orb1 {
+  width: 80vw;
+  height: 80vh;
+  background: radial-gradient(circle, rgba(62, 100, 166, 0.4) 0%, transparent 70%);
+  top: -20%;
+  left: -10%;
+}
+
+.orb2 {
+  width: 70vw;
+  height: 70vw;
+  background: radial-gradient(circle, rgba(46, 76, 56, 0.3) 0%, transparent 70%);
+  bottom: -20%;
+  right: -10%;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(5%, 5%); }
+}
+
+/* Exit button */
+.overlay {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 100;
+}
+
+.exitBtn {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.exitBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Vertical side nav */
+.sideNav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  gap: 24px;
+  z-index: 100;
+  background: none;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.navContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  opacity: 0;
+  transform: translateX(12px);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+}
+
+.navItem:hover .navContent,
+.navItemActive .navContent {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.navTitle {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.navIndicator {
+  width: 3px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  flex-shrink: 0;
+}
+
+.navItemActive .navIndicator {
+  background: #ffffff;
+  height: 44px;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
+}
+
+.navItem:hover:not(.navItemActive) .navIndicator {
+  background: rgba(255, 255, 255, 0.5);
+  height: 32px;
+}
+
+/* Sections */
+.section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 160px 80px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.heroSection {
+  flex-direction: column;
+  text-align: center;
+  gap: 0;
+}
+
+/* Badge */
+.sysBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 32px;
+}
+
+.sysBadge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #4ade80;
+  flex-shrink: 0;
+}
+
+.sysBadgeBottom {
+  margin-bottom: 24px;
+}
+
+/* Hero */
+.megaTitle {
+  font-size: clamp(48px, 8vw, 84px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.4) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.heroSub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.heroIntro {
+  margin-top: 14px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Cinematic slide */
+.cinematicWrapper {
+  width: 100%;
+  max-width: 1100px;
+  height: 70vh;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.cinematicImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 10s ease-out;
+}
+
+.cinematicImageContain {
+  object-fit: contain;
+  padding: 24px;
+}
+
+.section:hover .cinematicImage {
+  transform: scale(1.05);
+}
+
+.captionCard {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  max-width: 380px;
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.captionCard h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.captionCard p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Wireframe section override */
+.wireframeSection {
+  padding: 80px !important;
+  overflow: hidden;
+}
+
+/* Wireframe layout */
+.wireframeLayout {
+  display: flex;
+  align-items: center;
+}
+
+.wireframeCaptionFloat {
+  flex-shrink: 0;
+  width: 280px;
+  margin-left: -280px;
+  z-index: 10;
+  padding: 32px;
+  background: rgba(10, 10, 12, 0.45);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.wireframeCaptionFloat h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.wireframeCaptionFloat p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Userflow layout */
+.userflowLayout {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.userflowContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.captionCardSide {
+  width: 300px;
+  flex-shrink: 0;
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.captionCardSide h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.captionCardSide p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* End card */
+.thankYouCard {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(60px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 64px;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 24px 64px -12px rgba(0, 0, 0, 0.4);
+  animation: fadeInScale 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.95) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.thankYouTitle {
+  font-size: clamp(40px, 6vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.projectSummary {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin-bottom: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actionGroup {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.actionBtn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.actionBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.primary {
+  background: rgba(255, 255, 255, 0.95);
+  color: #000000;
+  border: none;
+}
+
+.primary:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+.iconCircle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+/* Not found */
+.notFound {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #0a0a0c;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.notFound button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .sideNav { display: none; }
+  .overlay { top: 16px; left: 16px; }
+  .section { padding: 40px 20px; }
+  .megaTitle { font-size: 36px; }
+  .heroIntro { font-size: 13px; }
+  .cinematicWrapper { height: 50vh; }
+  .captionCard { bottom: 20px; right: 16px; left: 16px; max-width: 100%; padding: 20px; }
+  .thankYouCard { padding: 40px 20px; }
+  /* Wireframe section stacks vertically on mobile */
+  .wireframeSection { padding: 40px 0 !important; overflow: visible; }
+  .wireframeLayout { flex-direction: column; gap: 24px; }
+  .wireframeCaptionFloat { width: calc(100% - 40px); margin-left: 20px; }
+  /* Userflow / system / typography layouts */
+  .userflowLayout { flex-direction: column; gap: 32px; }
+  .captionCardSide { width: 100%; }
+}

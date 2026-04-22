@@ -1,0 +1,107 @@
+.phone {
+  position: relative;
+  width: 130px;
+  height: 278px;
+  background: linear-gradient(160deg, #2e2e32 0%, #1c1c1e 45%, #111113 100%);
+  border-radius: 22px;
+  border: 1.5px solid rgba(255, 255, 255, 0.13);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+    0 2px 0 rgba(255, 255, 255, 0.04),
+    0 30px 70px rgba(0, 0, 0, 0.55),
+    0 10px 24px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Silent switch */
+.btnSilent {
+  position: absolute;
+  left: -3px;
+  top: 52px;
+  width: 3px;
+  height: 18px;
+  background: linear-gradient(180deg, #2a2a2e, #1a1a1c);
+  border-radius: 2px 0 0 2px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Volume buttons */
+.btnVolUp {
+  position: absolute;
+  left: -3px;
+  top: 80px;
+  width: 3px;
+  height: 28px;
+  background: linear-gradient(180deg, #2a2a2e, #1a1a1c);
+  border-radius: 2px 0 0 2px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.btnVolDown {
+  position: absolute;
+  left: -3px;
+  top: 118px;
+  width: 3px;
+  height: 28px;
+  background: linear-gradient(180deg, #2a2a2e, #1a1a1c);
+  border-radius: 2px 0 0 2px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Power button */
+.btnPower {
+  position: absolute;
+  right: -3px;
+  top: 96px;
+  width: 3px;
+  height: 52px;
+  background: linear-gradient(180deg, #2a2a2e, #1a1a1c);
+  border-radius: 0 2px 2px 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Screen */
+.screen {
+  position: absolute;
+  inset: 7px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Dynamic island */
+.island {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38px;
+  height: 9px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.screenImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* Home indicator */
+.homeBar {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38px;
+  height: 3.5px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  z-index: 2;
+}

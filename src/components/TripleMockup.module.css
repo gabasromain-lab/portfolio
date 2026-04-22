@@ -1,0 +1,144 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Phone frame */
+.phone {
+  position: relative;
+  width: 120px;
+  height: 259px;
+  background: linear-gradient(160deg, #2e2e32 0%, #1c1c1e 45%, #111113 100%);
+  border-radius: 20px;
+  border: 1.5px solid rgba(255, 255, 255, 0.13);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+    0 24px 60px rgba(0, 0, 0, 0.55),
+    0 8px 20px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+/* Side buttons */
+.btnSilent {
+  position: absolute;
+  left: -2.5px;
+  top: 48px;
+  width: 2.5px;
+  height: 17px;
+  background: linear-gradient(180deg, #2a2a2e, #1a1a1c);
+  border-radius: 2px 0 0 2px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.btnVolUp {
+  position: absolute;
+  left: -2.5px;
+  top: 74px;
+  width: 2.5px;
+  height: 26px;
+  background: linear-gradient(180deg, #2a2a2e, #1a1a1c);
+  border-radius: 2px 0 0 2px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.btnVolDown {
+  position: absolute;
+  left: -2.5px;
+  top: 109px;
+  width: 2.5px;
+  height: 26px;
+  background: linear-gradient(180deg, #2a2a2e, #1a1a1c);
+  border-radius: 2px 0 0 2px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.btnPower {
+  position: absolute;
+  right: -2.5px;
+  top: 89px;
+  width: 2.5px;
+  height: 48px;
+  background: linear-gradient(180deg, #2a2a2e, #1a1a1c);
+  border-radius: 0 2px 2px 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Screen */
+.screen {
+  position: absolute;
+  inset: 6px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #000;
+}
+
+.island {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35px;
+  height: 8px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.screenImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.homeBar {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* Composition layout */
+.phoneWrap {
+  position: absolute;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.left {
+  transform: translateX(-95px) translateY(18px) rotate(-10deg);
+  z-index: 1;
+}
+
+.center {
+  transform: translateY(-10px);
+  z-index: 3;
+}
+
+.right {
+  transform: translateX(95px) translateY(18px) rotate(10deg);
+  z-index: 2;
+}
+
+/* Hover lift */
+.wrapper:hover .left {
+  transform: translateX(-100px) translateY(22px) rotate(-12deg);
+}
+
+.wrapper:hover .center {
+  transform: translateY(-18px);
+}
+
+.wrapper:hover .right {
+  transform: translateX(100px) translateY(22px) rotate(12deg);
+}

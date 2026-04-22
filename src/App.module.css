@@ -1,0 +1,136 @@
+.ambientBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #08080c;
+  overflow: hidden;
+}
+
+/* cercle bleu blurry — même style que le footer */
+.ambientBg::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(75, 78, 255, 0.18) 0%, rgba(43, 178, 255, 0.08) 40%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.glassCircle2 {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  top: 30%;
+  right: 8%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.glassCircle3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  bottom: 15%;
+  left: 30%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+.glassSquare1 {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  top: 10%;
+  right: 20%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transform: rotate(18deg);
+}
+
+.glassSquare2 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 14px;
+  bottom: 20%;
+  right: 5%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  transform: rotate(-12deg);
+}
+
+.grainOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+}
+
+.contentSheet {
+  background: #0e0e14;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: 100px 14%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 -40px 80px rgba(0, 0, 0, 0.4);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 64px;
+}
+
+.sectionLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 1024px) {
+  .projectGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .contentSheet { padding: 60px 20px; }
+  .sectionTitle { font-size: 28px; }
+  .sectionHeader { margin-bottom: 40px; }
+  .projectGrid { gap: 24px; }
+}
