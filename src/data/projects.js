@@ -2,9 +2,9 @@ export const projects = [
   {
     slug: 'bike-tracker',
     image: '/imgmain_saferider.png',
-    alt: 'Mobile app - Bike tracker',
+    alt: 'Secure Rider',
     tags: ['UI Design', 'Coyote', '2023'],
-    title: 'Mobile app — Bike tracker',
+    title: 'Secure Rider',
     description: 'A secure mobile application for real-time motorcycle tracking, combining live GPS data with a clean, minimal interface built for riders on the go.',
     intro: 'Specific mobile app for riders who care about their bike\'s security. Built for both iOS and Android.',
     featured: true,
