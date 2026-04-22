@@ -1,27 +1,23 @@
-.nav {
+.navWrap {
   position: fixed;
   top: 32px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+}
+
+.nav {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 6px;
   background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-pill);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-
-.nav::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  z-index: -1;
+  position: relative;
 }
 
 .glowLine {
@@ -63,6 +59,7 @@
 }
 
 @media (max-width: 600px) {
-  .nav { top: 16px; gap: 2px; }
+  .navWrap { top: 16px; }
+  .nav { gap: 2px; }
   .nav a { padding: 7px 10px; font-size: 12px; }
 }
