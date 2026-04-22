@@ -43,7 +43,7 @@ export default function Nav() {
   }, [active])
 
   return (
-    <div className={styles.navWrap}>
+    <>
       <nav className={styles.nav} ref={navRef}>
         <div className={styles.glowLine} style={lineStyle} />
         {links.map(({ href, label }, i) => (
@@ -57,6 +57,6 @@ export default function Nav() {
           </a>
         ))}
       </nav>
-    </div>
+    </>
   )
 }
