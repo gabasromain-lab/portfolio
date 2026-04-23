@@ -1,0 +1,12 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons/Check/Circle/Small">
+<g id="Check-circle-small">
+<rect id="Background" opacity="0.01" width="32" height="32" fill="#1A1A21"/>
+<circle id="Oval" cx="16" cy="16" r="6.5" stroke="#979797"/>
+<g id="Check">
+<path id="Rectangle Copy 53" d="M13.3183 15.8891C13.5136 15.6938 13.8302 15.6938 14.0254 15.8891L15.4396 17.3033C15.6349 17.4986 15.6349 17.8152 15.4396 18.0104V18.0104C15.2444 18.2057 14.9278 18.2057 14.7325 18.0104L13.3183 16.5962C13.1231 16.401 13.1231 16.0844 13.3183 15.8891V15.8891Z" fill="#979797"/>
+<rect id="Rectangle Copy 53_2" x="14.3789" y="17.6569" width="6" height="1" rx="0.5" transform="rotate(-45 14.3789 17.6569)" fill="#979797"/>
+</g>
+</g>
+</g>
+</svg>

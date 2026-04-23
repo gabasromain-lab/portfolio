@@ -1,0 +1,18 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons/Lock">
+<g id="Lock 1" clip-path="url(#clip0_0_10824)">
+<g id="Icons/Lock_2">
+<g id="Lock">
+<path id="Rectangle" d="M21.5 20.5V18.5C21.5 16.8431 20.1569 15.5 18.5 15.5L14.5 15.5C12.8431 15.5 11.5 16.8431 11.5 18.5L11.5 20.5C11.5 22.1569 12.8431 23.5 14.5 23.5H18.5C20.1569 23.5 21.5 22.1569 21.5 20.5Z" stroke="#191919"/>
+<path id="Line" d="M16.5 19.5V20.5" stroke="#191919" stroke-linecap="square"/>
+<path id="Rectangle_2" fill-rule="evenodd" clip-rule="evenodd" d="M19 15.5H14V12C14 11.3096 14.2798 10.6846 14.7322 10.2322C15.1846 9.77982 15.8096 9.5 16.5 9.5C17.1904 9.5 17.8154 9.77982 18.2678 10.2322C18.7202 10.6846 19 11.3096 19 12V15.5Z" stroke="#191919"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_10824">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

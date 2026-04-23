@@ -1,0 +1,9 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons/User">
+<g id="User">
+<rect id="Background" opacity="0.01" width="32" height="32" fill="#1A1A21"/>
+<path id="Rectangle" d="M14 17.5H19C20.3807 17.5 21.5 18.6193 21.5 20V22.5H11.5V20C11.5 18.6193 12.6193 17.5 14 17.5Z" stroke="#979797"/>
+<rect id="Rectangle Copy" x="13.5" y="9.5" width="6" height="6" rx="3" stroke="#979797"/>
+</g>
+</g>
+</svg>

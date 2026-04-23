@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons/Arrow/Right-exit">
+<g id="Arrow-right-exit">
+<rect id="Background" opacity="0.01" width="32" height="32" fill="#1A1A21"/>
+<g id="Arrow 2">
+<g id="Arrow">
+<rect id="Rectangle" x="20.6641" y="19.9675" width="1" height="5" rx="0.5" transform="rotate(-135 20.6641 19.9675)" fill="#1A1A21"/>
+<rect id="Rectangle_2" x="19.957" y="13.6035" width="1" height="5" rx="0.5" transform="rotate(-45 19.957 13.6035)" fill="#1A1A21"/>
+</g>
+</g>
+<rect id="Rectangle_3" x="15.25" y="16.25" width="7.5" height="0.5" rx="0.25" fill="#D8D8D8" stroke="#979797" stroke-width="0.5"/>
+<rect id="Rectangle Copy" x="11.25" y="8.25" width="4.5" height="0.5" rx="0.25" fill="#D8D8D8" stroke="#979797" stroke-width="0.5"/>
+<rect id="Rectangle Copy 2" x="11.25" y="24.25" width="4.5" height="0.5" rx="0.25" fill="#D8D8D8" stroke="#979797" stroke-width="0.5"/>
+<rect id="Rectangle Copy 2_2" x="11.25" y="8.25" width="0.5" height="16.5" rx="0.25" fill="#D8D8D8" stroke="#979797" stroke-width="0.5"/>
+</g>
+</g>
+</svg>

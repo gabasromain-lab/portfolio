@@ -35,6 +35,18 @@ export const projects = [
         title: 'Typography',
         text: 'Anti-theft alerts, live geofencing, and tamper detection were woven into the interaction model from day one — security as a feature, not an afterthought.',
       },
+      {
+        type: 'colors',
+        number: '05',
+        title: 'Color System',
+        text: 'A structured token-based palette built for clarity and hierarchy — deep neutrals for surfaces, semantic greens and reds for status, and a full blue scale for UI states.',
+      },
+      {
+        type: 'iconography',
+        number: '06',
+        title: 'Iconography',
+        text: 'A unified set of line icons and custom illustrations — consistent stroke weight, semantic color usage, and three interaction states: default, active, and navigation.',
+      },
     ],
     summary: 'A mobile-first bike tracker that makes real-time security feel effortless — clean UI, instant alerts, and GPS precision in the palm of your hand.',
   },

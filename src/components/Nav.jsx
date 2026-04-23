@@ -42,6 +42,13 @@ export default function Nav() {
     })
   }, [active])
 
+  function handleClick(e, href) {
+    e.preventDefault()
+    const id = href.slice(1)
+    const target = document.getElementById(id)
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
     <>
       <nav className={styles.nav} ref={navRef}>
@@ -52,6 +59,7 @@ export default function Nav() {
             href={href}
             ref={el => (linkRefs.current[i] = el)}
             className={active === href.slice(1) ? styles.active : ''}
+            onClick={e => handleClick(e, href)}
           >
             {label}
           </a>

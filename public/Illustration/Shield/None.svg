@@ -1,0 +1,24 @@
+<svg width="144" height="144" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Illustration/Shield/None">
+<g id="None 1" clip-path="url(#clip0_0_11069)">
+<g id="Illustration/Shield/None_2">
+<g id="Shield-none">
+<g id="Illustration">
+<path id="Rectangle" fill-rule="evenodd" clip-rule="evenodd" d="M34 40.0513L72 27L110 40.0513C110 44.1882 110 54.692 110 71.5627C110 88.4334 97.3333 103.246 72 116C46.6667 103.246 34 88.4334 34 71.5627C34 54.692 34 44.1882 34 40.0513Z" fill="#3B3A4F"/>
+<path id="Rectangle_2" d="M72 23.828L72.9745 24.1627L110.974 37.214L113 37.9097V71.5627C113 89.7856 99.5883 105.469 73.349 118.68L72 119.359L70.651 118.68C44.4117 105.469 31 89.7856 31 71.5627V37.9097L33.0255 37.214L71.0255 24.1627L72 23.828ZM72 27L34 40.0513V71.5627C34 88.4334 46.6667 103.246 72 116C97.3333 103.246 110 88.4334 110 71.5627V40.0513L72 27Z" fill="#585772"/>
+<g id="Slash">
+<g id="Path">
+<path id="Rectangle-Copy-52" fill-rule="evenodd" clip-rule="evenodd" d="M81.3349 59.1213L64.1217 76.3345C63.7312 76.725 63.098 76.725 62.7075 76.3345C62.3169 75.944 62.3169 75.3108 62.7075 74.9203L79.9207 57.7071C80.3112 57.3166 80.9444 57.3166 81.3349 57.7071C81.7254 58.0976 81.7254 58.7308 81.3349 59.1213Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_11069">
+<rect width="144" height="144" fill="white"/>
+</clipPath>
+</defs>
+</svg>

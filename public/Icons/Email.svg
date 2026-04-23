@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons/Email">
+<g id="Message">
+<rect id="Background" opacity="0.01" width="32" height="32" fill="#1A1A21"/>
+<rect id="Rectangle" x="9.5" y="11.5" width="14" height="10" rx="1.5" stroke="#979797"/>
+<path id="Path" d="M10 12L15.0858 17.0858C15.8668 17.8668 17.1332 17.8668 17.9142 17.0858L23 12" stroke="#979797"/>
+<path id="Path 2" d="M10 21L14 16" stroke="#979797"/>
+<path id="Path 3" d="M23 21L19 16" stroke="#979797"/>
+</g>
+</g>
+</svg>

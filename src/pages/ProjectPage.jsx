@@ -4,6 +4,8 @@ import { projects } from '../data/projects'
 import UserFlowCards from '../components/UserFlowCards'
 import SystemDiagram from '../components/SystemDiagram'
 import TypographySlide from '../components/TypographySlide'
+import ColorsSlide from '../components/ColorsSlide'
+import IconographySlide from '../components/IconographySlide'
 import WireframeScroll from '../components/WireframeScroll'
 import styles from './ProjectPage.module.css'
 
@@ -148,12 +150,14 @@ export default function ProjectPage() {
                   <p>{slide.text}</p>
                 </div>
               </div>
-            ) : (slide.type === 'userflow' || slide.type === 'system' || slide.type === 'typography') ? (
+            ) : (slide.type === 'userflow' || slide.type === 'system' || slide.type === 'typography' || slide.type === 'colors' || slide.type === 'iconography') ? (
               <div className={styles.userflowLayout}>
                 <div className={styles.userflowContent}>
                   {slide.type === 'userflow' && <UserFlowCards cards={slide.cards} features={slide.features} />}
                   {slide.type === 'system' && <SystemDiagram />}
                   {slide.type === 'typography' && <TypographySlide />}
+                  {slide.type === 'colors' && <ColorsSlide />}
+                  {slide.type === 'iconography' && <IconographySlide />}
                 </div>
                 <div className={styles.captionCardSide}>
                   <h4>{slide.number} / {slide.title}</h4>

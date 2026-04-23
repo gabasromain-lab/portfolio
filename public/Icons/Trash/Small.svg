@@ -1,0 +1,10 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons/Trash/Small">
+<g id="Trash-small">
+<rect id="Background" opacity="0.01" width="32" height="32" fill="#1A1A21"/>
+<path id="Rectangle" d="M22.5518 12.5L21.915 23.0898C21.8674 23.8817 21.2113 24.4998 20.418 24.5H11.666C10.8726 24.5 10.2156 23.8818 10.168 23.0898L9.53125 12.5H22.5518Z" stroke="#979797"/>
+<rect id="Rectangle Copy" x="8.5" y="9.5" width="15" height="3" rx="0.5" stroke="#979797"/>
+<path id="Rectangle Copy 2" d="M18.5 9.5V8C18.5 7.17157 17.8284 6.5 17 6.5H15C14.1716 6.5 13.5 7.17157 13.5 8V9.5H18.5Z" stroke="#979797"/>
+</g>
+</g>
+</svg>

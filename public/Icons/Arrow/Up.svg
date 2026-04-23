@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons/Arrow/Up">
+<g id="Arrow-up">
+<rect id="Background" opacity="0.01" width="32" height="32" fill="#1A1A21"/>
+<g id="Arrow">
+<rect id="Rectangle" x="21.6567" y="17" width="1" height="8" rx="0.5" transform="rotate(135 21.6567 17)" fill="#1A1A21"/>
+<rect id="Rectangle_2" x="11.0503" y="17.7071" width="1" height="8" rx="0.5" transform="rotate(-135 11.0503 17.7071)" fill="#1A1A21"/>
+</g>
+</g>
+</g>
+</svg>

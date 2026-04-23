@@ -1,0 +1,19 @@
+<svg width="144" height="144" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Illustration/Detective">
+<g id="Detective">
+<rect id="Background" opacity="0.01" width="144" height="144" fill="#2C2C39"/>
+<g id="Illustration">
+<g id="Hat">
+<rect id="Rectangle" x="18.5" y="74.5" width="106" height="2" rx="1" fill="#585772" stroke="#585772"/>
+<path id="Line Copy 2" d="M37.5335 63.4318L104.319 64.2955" stroke="#585772" stroke-width="3" stroke-linecap="round"/>
+<path id="Rectangle_2" d="M43.916 34.7256C44.1149 33.8305 45.0631 33.3221 45.9189 33.6514L70.5469 43.127C71.611 43.5364 72.7915 43.5266 73.8486 43.0996L97.0703 33.7178C97.93 33.3705 98.8958 33.879 99.0967 34.7842L108.13 75.5H34.8701L43.916 34.7256Z" stroke="#585772" stroke-width="3"/>
+</g>
+<g id="Glasses">
+<path id="Line Copy" d="M65 95.9918C65 95.9918 67.9396 95.0082 71.0246 95.0082C74.1095 95.0082 77 95.9918 77 95.9918" stroke="#585772" stroke-width="3" stroke-linecap="round"/>
+<rect id="Rectangle_3" x="34.5" y="86.5" width="30" height="24" rx="3.5" stroke="#585772" stroke-width="3"/>
+<rect id="Rectangle Copy" x="77.5" y="86.5" width="30" height="24" rx="3.5" stroke="#585772" stroke-width="3"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

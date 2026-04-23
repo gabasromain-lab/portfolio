@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons/Shield-alert">
+<g id="Icons/Shield-alert_2">
+<g id="Shield-alert">
+<g id="Warning">
+<path id="Combined-Shape" fill-rule="evenodd" clip-rule="evenodd" d="M16 20C16.5523 20 17 19.5523 17 19C17 18.4477 16.5523 18 16 18C15.4477 18 15 18.4477 15 19C15 19.5523 15.4477 20 16 20ZM16 10C16.5523 10 17 10.4477 17 11V16C17 16.5523 16.5523 17 16 17C15.4477 17 15 16.5523 15 16V11C15 10.4477 15.4477 10 16 10Z" fill="#969696"/>
+</g>
+<g id="Shield">
+<path id="Combined-Shape_2" fill-rule="evenodd" clip-rule="evenodd" d="M16 2L28 6V16C28 21.3076 24 25.9743 16 30C8 25.9723 4 21.3047 4 15.997V6L16 2ZM16 4L6 7V15.9974C6 20.5468 9.33333 24.5477 16 28C22.6667 24.5494 26 20.5494 26 16V7L16 4Z" fill="#191919"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

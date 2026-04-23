@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons/Arrow/Rotate">
+<g id="Arrow-rotate">
+<rect id="Background" opacity="0.01" width="32" height="32" fill="#1A1A21"/>
+<g id="Icons">
+<path id="Path" d="M24 16C24 11.5817 20.4183 8 16 8C11.5817 8 8 11.5817 8 16C8 20.4183 11.5817 24 16 24C18.194 24 20.1817 23.1168 21.627 21.6865" stroke="#1A1A21" stroke-linecap="round"/>
+<path id="Triangle" fill-rule="evenodd" clip-rule="evenodd" d="M24.2088 17.9891L20.8074 14.3273L26.7746 13.7002L24.2088 17.9891Z" fill="#1A1A21"/>
+</g>
+</g>
+</g>
+</svg>
