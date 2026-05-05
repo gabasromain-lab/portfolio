@@ -1,7 +1,7 @@
 export const projects = [
   {
     slug: 'bike-tracker',
-    image: '/imgmain_saferider.png',
+    image: '/Desktop - 1.png',
     alt: 'Secure Rider',
     tags: ['UI Design', 'Coyote', '2023'],
     title: 'Secure Rider',
@@ -46,6 +46,12 @@ export const projects = [
         number: '06',
         title: 'Iconography',
         text: 'A unified set of line icons and custom illustrations — consistent stroke weight, semantic color usage, and three interaction states: default, active, and navigation.',
+      },
+      {
+        type: 'uiscreens',
+        number: '07',
+        title: 'UI Screens',
+        text: 'Final high-fidelity screens across all core flows — customizable alert schedules, live surveillance states, alert triggers, and full event history.',
       },
     ],
     summary: 'A mobile-first bike tracker that makes real-time security feel effortless — clean UI, instant alerts, and GPS precision in the palm of your hand.',

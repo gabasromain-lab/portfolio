@@ -200,7 +200,7 @@
 
 /* Hero */
 .megaTitle {
-  font-size: clamp(48px, 8vw, 84px);
+  font-size: clamp(28px, 8vw, 84px);
   font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 0.95;
@@ -479,16 +479,29 @@
   .sideNav { display: none; }
   .overlay { top: 16px; left: 16px; }
   .section { padding: 40px 20px; }
-  .megaTitle { font-size: 36px; }
+  .megaTitle { font-size: 32px; }
   .heroIntro { font-size: 13px; }
   .cinematicWrapper { height: 50vh; }
-  .captionCard { bottom: 20px; right: 16px; left: 16px; max-width: 100%; padding: 20px; }
+  .captionCard { bottom: 16px; right: 16px; left: 16px; max-width: 100%; padding: 20px; }
   .thankYouCard { padding: 40px 20px; }
-  /* Wireframe section stacks vertically on mobile */
   .wireframeSection { padding: 40px 0 !important; overflow: visible; }
   .wireframeLayout { flex-direction: column; gap: 24px; }
   .wireframeCaptionFloat { width: calc(100% - 40px); margin-left: 20px; }
-  /* Userflow / system / typography layouts */
-  .userflowLayout { flex-direction: column; gap: 32px; }
-  .captionCardSide { width: 100%; }
+  .userflowLayout { flex-direction: column; gap: 24px; }
+  .captionCardSide { width: 100%; padding: 20px; }
+  .captionCardSide p { font-size: 14px; }
+  .projectSummary { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 24px 16px; }
+  .megaTitle { font-size: 26px; }
+  .thankYouCard { padding: 28px 16px; }
+  .actionGroup { flex-direction: column; align-items: stretch; }
+  .actionBtn { justify-content: center; }
+  .wireframeCaptionFloat { width: calc(100% - 32px); margin-left: 16px; padding: 20px; }
+  .exitBtn { padding: 8px 14px; font-size: 11px; }
+  .cinematicWrapper { height: 40vh; border-radius: 16px; }
+  .captionCard { padding: 16px; }
+  .captionCard p { font-size: 13px; }
 }

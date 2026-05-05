@@ -1,5 +1,13 @@
 import styles from './AboutSection.module.css'
 
+const toolLogos = [
+  { name: 'Figma',        src: '/figma.svg' },
+  { name: 'Sketch',       src: '/Vector.svg' },
+  { name: 'After Effects',src: '/Ae.svg' },
+  { name: 'Blender',      src: '/blender.svg' },
+  { name: 'Principle',    src: '/principle.svg' },
+]
+
 const timeline = [
   {
     period: '2022 — Present',
@@ -53,8 +61,15 @@ export default function AboutSection() {
           experiences — from early wireframes to production-ready interfaces.
         </p>
         <div className={styles.tags}>
-          {['Figma', 'Sketch', 'Principle', 'After Effects', 'Blender', 'Design System', 'Design Thinking', 'Prototyping', 'Wireframing', 'User Research', 'UI Design', 'User Flow', 'Motion', '3D'].map(t => (
+          {['Design System', 'Design Thinking', 'Prototyping', 'Wireframing', 'User Research', 'UI Design', 'User Flow', 'Motion', '3D'].map(t => (
             <span key={t} className={styles.tag}>{t}</span>
+          ))}
+        </div>
+        <div className={styles.toolRow}>
+          {toolLogos.map(({ name, src }) => (
+            <span key={name} className={styles.toolBadge} title={name}>
+              <img src={src} alt={name} className={styles.toolIcon} />
+            </span>
           ))}
         </div>
       </div>

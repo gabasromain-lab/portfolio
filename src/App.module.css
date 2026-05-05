@@ -128,9 +128,15 @@
   .projectGrid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 600px) {
-  .contentSheet { padding: 60px 20px; }
-  .sectionTitle { font-size: 28px; }
-  .sectionHeader { margin-bottom: 40px; }
-  .projectGrid { gap: 24px; }
+@media (max-width: 768px) {
+  .contentSheet { padding: 80px 24px; }
+  .sectionTitle { font-size: 32px; }
+  .sectionHeader { flex-direction: column; align-items: flex-start; margin-bottom: 48px; }
+}
+
+@media (max-width: 480px) {
+  .contentSheet { padding: 48px 16px; }
+  .sectionTitle { font-size: 26px; }
+  .sectionHeader { margin-bottom: 32px; }
+  .projectGrid { gap: 20px; }
 }

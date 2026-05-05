@@ -17,6 +17,11 @@
   align-items: flex-start;
 }
 
+@media (max-width: 768px) {
+  .wrapper { width: 100vw; }
+  .track { padding: 16px 80px 16px 16px; gap: 12px; }
+}
+
 .track::-webkit-scrollbar { display: none; }
 
 /* Phone shell */

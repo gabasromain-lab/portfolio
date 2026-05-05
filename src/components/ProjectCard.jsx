@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom'
 import IphoneMockup from './IphoneMockup'
+import ThreeMockupsCover from './ThreeMockupsCover'
 import styles from './ProjectCard.module.css'
 
-export default function ProjectCard({ image, alt, tags, title, description, slug, mockup }) {
+export default function ProjectCard({ image, alt, tags, title, description, slug, mockup, screens }) {
   return (
     <Link to={`/project/${slug}`} className={styles.card}>
-      {mockup ? (
+      {screens ? (
+        <div className={styles.mockupWrap}>
+          <ThreeMockupsCover screens={screens} />
+        </div>
+      ) : mockup ? (
         <div className={styles.mockupWrap}>
           <IphoneMockup src={image} alt={alt} />
         </div>

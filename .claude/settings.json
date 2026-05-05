@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Rename-Item \"d:\\\\romain-gabas-portfolio\\\\public\\\\UI screen\\\\Surveillance - Hours D+1.png\" \"Surveillance - Hours D1.png\")",
+      "PowerShell(python -c \"import anthropic; client = anthropic.Anthropic\\(\\); r = client.messages.create\\(model='claude-haiku-4-5-20251001', max_tokens=10, messages=[{'role':'user','content':'dis juste ok'}]\\); print\\(r.content[0].text\\)\")",
+      "PowerShell(& \"C:\\\\Users\\\\roman\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python314\\\\python.exe\" -c \"import anthropic; client = anthropic.Anthropic\\(\\); r = client.messages.create\\(model='claude-haiku-4-5-20251001', max_tokens=10, messages=[{'role':'user','content':'dis juste ok'}]\\); print\\(r.content[0].text\\)\")",
+      "PowerShell([System.Environment]::GetEnvironmentVariable\\(\"ANTHROPIC_API_KEY\", \"User\"\\))",
+      "PowerShell($env:ANTHROPIC_API_KEY = [System.Environment]::GetEnvironmentVariable\\(\"ANTHROPIC_API_KEY\", \"User\"\\); & \"C:\\\\Users\\\\roman\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python314\\\\python.exe\" -c \"import anthropic; client = anthropic.Anthropic\\(\\); r = client.messages.create\\(model='claude-haiku-4-5-20251001', max_tokens=10, messages=[{'role':'user','content':'dis juste ok'}]\\); print\\(r.content[0].text\\)\")",
+      "PowerShell(schtasks /create /tn \"JobAlertQuotidien\" /tr \"d:\\\\romain-gabas-portfolio\\\\lancer_job_alert.bat\" /sc daily /st 08:00 /f)",
+      "PowerShell(schtasks /create /tn \"JobAlertQuotidien\" /tr \"d:\\\\romain-gabas-portfolio\\\\lancer_job_alert.bat\" /sc daily /st 09:00 /f)"
+    ],
+    "additionalDirectories": [
+      "d:\\",
+      "C:\\Users\\roman\\.claude\\projects\\d--romain-gabas-portfolio\\memory"
+    ]
+  }
+}

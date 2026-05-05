@@ -131,3 +131,18 @@
   70%  { opacity: 1; }
   100% { opacity: 0.1; }
 }
+
+@media (max-width: 768px) {
+  .row { flex-direction: column; align-items: center; }
+  .arrowConnector { width: 2px; height: 40px; flex-direction: column; }
+  .arrowLine { width: 1px; flex: 1; height: unset; }
+  .arrowHead {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid rgba(255, 255, 255, 0.2);
+    border-bottom: none;
+  }
+  .wifiConnector { width: auto; height: 40px; }
+  .card { padding: 20px 28px; min-width: 120px; }
+  .label { font-size: 14px; }
+}

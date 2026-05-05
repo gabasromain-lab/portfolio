@@ -6,6 +6,7 @@ import SystemDiagram from '../components/SystemDiagram'
 import TypographySlide from '../components/TypographySlide'
 import ColorsSlide from '../components/ColorsSlide'
 import IconographySlide from '../components/IconographySlide'
+import UIScreensSlide from '../components/UIScreensSlide'
 import WireframeScroll from '../components/WireframeScroll'
 import styles from './ProjectPage.module.css'
 
@@ -13,12 +14,18 @@ export default function ProjectPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const project = projects.find(p => p.slug === slug)
+  const currentIndex = projects.findIndex(p => p.slug === slug)
+  const nextProject = projects[(currentIndex + 1) % projects.length]
 
   const [activeSection, setActiveSection] = useState(0)
   const containerRef = useRef(null)
   const wireframeTrackRef = useRef(null)
+  const uiscreensTrackRef = useRef(null)
   const wireframeSectionIdx = project
     ? 1 + project.slides.findIndex(s => s.type === 'wireframes')
+    : -1
+  const uiscreensSectionIdx = project
+    ? 1 + project.slides.findIndex(s => s.type === 'uiscreens')
     : -1
 
   useEffect(() => {
@@ -28,11 +35,12 @@ export default function ProjectPage() {
 
   useEffect(() => {
     const container = containerRef.current
-    if (!container || wireframeSectionIdx < 0) return
+    if (!container) return
 
     const handleWheel = (e) => {
-      if (activeSection !== wireframeSectionIdx) return
-      const track = wireframeTrackRef.current
+      let track = null
+      if (activeSection === wireframeSectionIdx) track = wireframeTrackRef.current
+      else if (activeSection === uiscreensSectionIdx) track = uiscreensTrackRef.current
       if (!track) return
 
       const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 5
@@ -51,7 +59,7 @@ export default function ProjectPage() {
 
     container.addEventListener('wheel', handleWheel, { passive: false })
     return () => container.removeEventListener('wheel', handleWheel)
-  }, [activeSection, wireframeSectionIdx])
+  }, [activeSection, wireframeSectionIdx, uiscreensSectionIdx])
 
   useEffect(() => {
     const container = containerRef.current
@@ -141,10 +149,18 @@ export default function ProjectPage() {
         </section>
 
         {project.slides.map((slide, i) => (
-          <section key={i} className={`${styles.section} ${slide.type === 'wireframes' ? styles.wireframeSection : ''}`}>
+          <section key={i} className={`${styles.section} ${(slide.type === 'wireframes' || slide.type === 'uiscreens') ? styles.wireframeSection : ''}`}>
             {slide.type === 'wireframes' ? (
               <div className={styles.wireframeLayout}>
                 <WireframeScroll trackRef={wireframeTrackRef} />
+                <div className={styles.wireframeCaptionFloat}>
+                  <h4>{slide.number} / {slide.title}</h4>
+                  <p>{slide.text}</p>
+                </div>
+              </div>
+            ) : slide.type === 'uiscreens' ? (
+              <div className={styles.wireframeLayout}>
+                <UIScreensSlide trackRef={uiscreensTrackRef} />
                 <div className={styles.wireframeCaptionFloat}>
                   <h4>{slide.number} / {slide.title}</h4>
                   <p>{slide.text}</p>
@@ -158,6 +174,7 @@ export default function ProjectPage() {
                   {slide.type === 'typography' && <TypographySlide />}
                   {slide.type === 'colors' && <ColorsSlide />}
                   {slide.type === 'iconography' && <IconographySlide />}
+                  {slide.type === 'uiscreens' && <UIScreensSlide screens={slide.screens} />}
                 </div>
                 <div className={styles.captionCardSide}>
                   <h4>{slide.number} / {slide.title}</h4>
@@ -178,22 +195,20 @@ export default function ProjectPage() {
 
         <section className={`${styles.section} ${styles.endSection}`}>
           <div className={styles.thankYouCard}>
-            <div className={`${styles.sysBadge} ${styles.sysBadgeBottom}`}>SESSION CONCLUDED</div>
             <h2 className={styles.thankYouTitle}>Thank You.</h2>
             <p className={styles.projectSummary}>{project.summary}</p>
             <div className={styles.actionGroup}>
-              <button
-                className={`${styles.actionBtn} ${styles.primary}`}
-                onClick={() => containerRef.current?.scrollTo({ top: 0, behavior: 'smooth' })}
-              >
-                <span className={styles.iconCircle} />
-                Restart Presentation
-              </button>
               <button className={styles.actionBtn} onClick={() => navigate('/')}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M19 12H5M12 19l-7-7 7-7" />
                 </svg>
                 Back to Portfolio
+              </button>
+              <button
+                className={`${styles.actionBtn} ${styles.primary}`}
+                onClick={() => navigate(`/project/${nextProject.slug}`)}
+              >
+                Next Project
               </button>
             </div>
           </div>
