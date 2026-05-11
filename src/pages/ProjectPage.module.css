@@ -359,7 +359,7 @@
   right: 40px;
   max-width: 380px;
   padding: 32px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(8, 8, 14, 0.78);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -399,7 +399,7 @@
   margin-left: -280px;
   z-index: 10;
   padding: 32px;
-  background: rgba(10, 10, 12, 0.45);
+  background: rgba(8, 8, 14, 0.82);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -441,7 +441,7 @@
   width: 300px;
   flex-shrink: 0;
   padding: 32px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(8, 8, 14, 0.78);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.1);
