@@ -45,6 +45,11 @@
       <a class="nav-item" href="#cards"><span class="nav-dot"></span>Cards</a>
     </nav>
 
+    <nav class="nav-group">
+      <span class="nav-label">Platform</span>
+      <a class="nav-item" href="#zeroheight"><span class="nav-dot"></span>ZeroHeight</a>
+    </nav>
+
     <div class="sidebar-foot">
       <span>v 1.0 · May 2026</span>
       <span>Sourced from 3 linked Figma libraries</span>
@@ -1171,6 +1176,83 @@
         </article>
 
       </div>
+    </section>
+
+    <!-- ===== ZEROHEIGHT ===== -->
+    <section class="section" id="zeroheight" data-screen-label="13 ZeroHeight">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Platform · Documentation</span>
+          <h2 class="section-title">Zero<em>Height</em></h2>
+        </div>
+        <p class="lead">Every guideline, component spec, and token decision is published on ZeroHeight — a living documentation platform accessible to designers, developers, and stakeholders alike.</p>
+      </div>
+
+      <div class="libfiles" style="grid-template-columns: repeat(3,1fr);">
+
+        <div class="libfile">
+          <span class="libfile-tab" style="background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.75);">01</span>
+          <div class="libfile-name" style="margin-top:12px;">Guidelines</div>
+          <div class="libfile-title">Usage rules</div>
+          <p class="libfile-desc">Each component is documented with its intended usage, dos and don'ts, and real product examples — so designers can make decisions quickly and consistently.</p>
+          <ul class="libfile-contents">
+            <li>Do & don't visual examples</li>
+            <li>Spacing & layout rules</li>
+            <li>Accessibility notes</li>
+            <li>Motion & interaction specs</li>
+          </ul>
+          <span class="libfile-stat">Audience · Designers + PMs</span>
+        </div>
+
+        <div class="libfile">
+          <span class="libfile-tab" style="background: rgba(35,214,62,0.2); color: #23D63E;">02</span>
+          <div class="libfile-name" style="margin-top:12px;">Component specs</div>
+          <div class="libfile-title">Dev handoff</div>
+          <p class="libfile-desc">Token values, prop tables, and code snippets live alongside the design specs. Engineers get everything they need to implement correctly — without opening Figma.</p>
+          <ul class="libfile-contents">
+            <li>Token references per component</li>
+            <li>Prop & variant tables</li>
+            <li>States: default, hover, focus, disabled</li>
+            <li>Copy-ready code snippets</li>
+          </ul>
+          <span class="libfile-stat">Audience · Developers</span>
+        </div>
+
+        <div class="libfile">
+          <span class="libfile-tab" style="background: rgba(18,109,249,0.22); color: #5ba4f9;">03</span>
+          <div class="libfile-name" style="margin-top:12px;">Changelog + RFC</div>
+          <div class="libfile-title">Governance</div>
+          <p class="libfile-desc">Every update is versioned and logged. The RFC process lets any team propose a change — with a lightweight review before it's shipped to the library.</p>
+          <ul class="libfile-contents">
+            <li>Versioned release notes</li>
+            <li>RFC template + review flow</li>
+            <li>Deprecation notices</li>
+            <li>Slack integration for update alerts</li>
+          </ul>
+          <span class="libfile-stat">Audience · All teams</span>
+        </div>
+
+      </div>
+
+      <div class="libchain" style="margin-top: 32px;">
+        <div>
+          <div class="libchain-eyebrow">Live platform</div>
+          <div class="libchain-title">One source of truth<br/>for every team.</div>
+        </div>
+        <div>
+          <div class="libchain-flow">
+            <span class="libchain-node">Figma libraries</span>
+            <span class="libchain-arrow">→</span>
+            <span class="libchain-node">Design tokens</span>
+            <span class="libchain-arrow">→</span>
+            <span class="libchain-node">ZeroHeight docs</span>
+            <span class="libchain-arrow">→</span>
+            <span class="libchain-node">Product teams</span>
+          </div>
+          <p class="libchain-note">When a token is updated in Figma and published, the ZeroHeight page automatically reflects the new value. Designers and developers always read from the same source — no outdated screenshots, no stale PDFs.</p>
+        </div>
+      </div>
+
     </section>
 
     <!-- ===== CLOSING ===== -->

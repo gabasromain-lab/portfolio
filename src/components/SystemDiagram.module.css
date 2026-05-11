@@ -22,6 +22,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   min-width: 160px;
   animation: fadeUp 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
   animation-delay: calc(var(--i) * 0.15s);

@@ -1,96 +1,185 @@
-<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="500" viewBox="-80 -60 960 620" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="gb" cx="15%" cy="25%" r="55%">
-      <stop offset="0%" stop-color="#3e64a6" stop-opacity="0.2"/>
+    <radialGradient id="gb" cx="15%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#3e64a6" stop-opacity="0.18"/>
       <stop offset="100%" stop-color="#0a0a0c" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="gg" cx="80%" cy="75%" r="45%">
-      <stop offset="0%" stop-color="#23D63E" stop-opacity="0.07"/>
-      <stop offset="100%" stop-color="#0a0a0c" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="shadow">
-      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000" flood-opacity="0.5"/>
-    </filter>
-    <filter id="shadowSm">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.4"/>
-    </filter>
+    <linearGradient id="fadeLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0f0f0f" stop-opacity="1"/>
+      <stop offset="40%"  stop-color="#0f0f0f" stop-opacity="1"/>
+      <stop offset="62%"  stop-color="#0f0f0f" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0f0f0f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="75%"  stop-color="#0f0f0f" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0f0f0f" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="fadeTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#0f0f0f" stop-opacity="1"/>
+      <stop offset="22%"  stop-color="#0f0f0f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeBot" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="78%"  stop-color="#0f0f0f" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0f0f0f" stop-opacity="1"/>
+    </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="500" fill="#0a0a0c"/>
-  <rect width="800" height="500" fill="url(#gb)"/>
-  <rect width="800" height="500" fill="url(#gg)"/>
+  <rect x="-200" y="-200" width="1400" height="1000" fill="#0f0f0f"/>
+  <rect x="-200" y="-200" width="1400" height="1000" fill="url(#gb)"/>
 
-  <!-- ── LEFT: Title ── -->
-  <text x="52" y="172" font-family="Inter,system-ui,sans-serif" font-size="72" font-weight="700" letter-spacing="-3" fill="rgba(255,255,255,0.93)">Copilote</text>
-  <text x="52" y="248" font-family="Inter,system-ui,sans-serif" font-size="72" font-weight="300" letter-spacing="-3" fill="#23D63E">system.</text>
-  <line x1="52" y1="276" x2="200" y2="276" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="52" y="302" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" fill="rgba(255,255,255,0.28)">132 tokens · 26 type styles · v1.0</text>
+  <!-- ── Color columns, angled ── -->
+  <!-- Each swatch: 86×108px, gap 5px between swatches, 10px between columns -->
+  <!-- Macro: swatch(x, y, fill, name, hex, textDark) -->
 
-  <!-- ── ISOMETRIC CARD 1: Colors (back, left) ── -->
-  <!-- Card face: parallelogram tilted isometrically -->
-  <g filter="url(#shadow)">
-    <!-- Bottom/depth strip (left side of box) -->
-    <polygon points="394,148 394,320 404,328 404,156" fill="rgba(0,0,0,0.4)"/>
-    <!-- Bottom/depth strip (bottom of box) -->
-    <polygon points="394,320 616,320 626,328 404,328" fill="rgba(0,0,0,0.25)"/>
-    <!-- Card face -->
-    <rect x="394" y="148" width="222" height="172" rx="12" fill="#111118" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
-    <!-- Asphalt swatches -->
-    <rect x="412" y="164" width="26" height="26" rx="6" fill="#EAEFFD"/>
-    <rect x="444" y="164" width="26" height="26" rx="6" fill="#9391BF"/>
-    <rect x="476" y="164" width="26" height="26" rx="6" fill="#585772"/>
-    <rect x="508" y="164" width="26" height="26" rx="6" fill="#272733"/>
-    <rect x="540" y="164" width="26" height="26" rx="6" fill="#1D1D26"/>
-    <rect x="572" y="164" width="26" height="26" rx="6" fill="#14141A"/>
-    <text x="412" y="206" font-family="Inter,system-ui,sans-serif" font-size="9" letter-spacing="1.5" fill="rgba(255,255,255,0.22)">ASPHALT</text>
-    <!-- Green swatches -->
-    <rect x="412" y="214" width="26" height="26" rx="6" fill="#D2FDD8"/>
-    <rect x="444" y="214" width="26" height="26" rx="6" fill="#56FF70"/>
-    <rect x="476" y="214" width="26" height="26" rx="6" fill="#23D63E"/>
-    <rect x="508" y="214" width="26" height="26" rx="6" fill="#1EBD36"/>
-    <rect x="540" y="214" width="26" height="26" rx="6" fill="#168A27"/>
-    <rect x="572" y="214" width="26" height="26" rx="6" fill="#06240A"/>
-    <text x="412" y="256" font-family="Inter,system-ui,sans-serif" font-size="9" letter-spacing="1.5" fill="rgba(255,255,255,0.22)">GREEN · BRAND</text>
-    <!-- Red swatches -->
-    <rect x="412" y="264" width="26" height="26" rx="6" fill="#FEE3E3"/>
-    <rect x="444" y="264" width="26" height="26" rx="6" fill="#F58071"/>
-    <rect x="476" y="264" width="26" height="26" rx="6" fill="#F5280F"/>
-    <rect x="508" y="264" width="26" height="26" rx="6" fill="#DB250D"/>
-    <rect x="540" y="264" width="26" height="26" rx="6" fill="#8F1809"/>
-    <rect x="572" y="264" width="26" height="26" rx="6" fill="#751407"/>
-    <text x="412" y="306" font-family="Inter,system-ui,sans-serif" font-size="9" letter-spacing="1.5" fill="rgba(255,255,255,0.22)">RED · DANGER</text>
+  <g transform="rotate(-30, 700, 400) translate(80, 0)">
+
+    <!-- ═══ COL 1: Green ═══  x=460 -->
+    <!-- swatch 0 -->
+    <rect x="460" y="-108" width="86" height="108" rx="8" fill="#D2FDD8" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <text x="472" y="-82" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(0,0,0,0.55)">Green-5</text>
+    <text x="472" y="-68" font-family="monospace" font-size="8" fill="rgba(0,0,0,0.4)">#D2FDD8</text>
+
+    <!-- swatch 1 -->
+    <rect x="460" y="5" width="86" height="108" rx="8" fill="#56FF70" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <text x="472" y="31" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(0,0,0,0.55)">Green-50</text>
+    <text x="472" y="45" font-family="monospace" font-size="8" fill="rgba(0,0,0,0.4)">#56FF70</text>
+
+    <!-- swatch 2 -->
+    <rect x="460" y="118" width="86" height="108" rx="8" fill="#23D63E" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <text x="472" y="144" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.9)">Green-200</text>
+    <text x="472" y="158" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.65)">#23D63E</text>
+
+    <!-- swatch 3 -->
+    <rect x="460" y="231" width="86" height="108" rx="8" fill="#1EBD36" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="472" y="257" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.9)">Green-300</text>
+    <text x="472" y="271" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.6)">#1EBD36</text>
+
+    <!-- swatch 4 -->
+    <rect x="460" y="344" width="86" height="108" rx="8" fill="#168A27" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="472" y="370" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.85)">Green-500</text>
+    <text x="472" y="384" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.55)">#168A27</text>
+
+    <!-- swatch 5 -->
+    <rect x="460" y="457" width="86" height="108" rx="8" fill="#06240A" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <text x="472" y="483" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.7)">Green-900</text>
+    <text x="472" y="497" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.45)">#06240A</text>
+
+    <!-- ═══ COL 2: Blue ═══  x=556 -->
+    <rect x="556" y="-108" width="86" height="108" rx="8" fill="#EBF4FF" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <text x="568" y="-82" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(0,0,0,0.55)">Blue-10</text>
+    <text x="568" y="-68" font-family="monospace" font-size="8" fill="rgba(0,0,0,0.4)">#EBF4FF</text>
+
+    <rect x="556" y="5" width="86" height="108" rx="8" fill="#126DF9" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <text x="568" y="31" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.95)">Blue-100</text>
+    <text x="568" y="45" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.7)">#126DF9</text>
+
+    <rect x="556" y="118" width="86" height="108" rx="8" fill="#1063E0" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="568" y="144" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.9)">Blue-200</text>
+    <text x="568" y="158" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.65)">#1063E0</text>
+
+    <rect x="556" y="231" width="86" height="108" rx="8" fill="#0C4DAD" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+    <text x="568" y="257" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.9)">Blue-400</text>
+    <text x="568" y="271" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.6)">#0C4DAD</text>
+
+    <rect x="556" y="344" width="86" height="108" rx="8" fill="#072B61" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <text x="568" y="370" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.85)">Blue-700</text>
+    <text x="568" y="384" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.55)">#072B61</text>
+
+    <rect x="556" y="457" width="86" height="108" rx="8" fill="#03142E" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="568" y="483" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.7)">Blue-900</text>
+    <text x="568" y="497" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.45)">#03142E</text>
+
+    <!-- ═══ COL 3: Asphalt ═══  x=652 -->
+    <rect x="652" y="-108" width="86" height="108" rx="8" fill="#EAEFFD" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <text x="664" y="-82" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(0,0,0,0.55)">Asphalt-5</text>
+    <text x="664" y="-68" font-family="monospace" font-size="8" fill="rgba(0,0,0,0.4)">#EAEFFD</text>
+
+    <rect x="652" y="5" width="86" height="108" rx="8" fill="#9391BF" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="664" y="31" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.9)">Asphalt-25</text>
+    <text x="664" y="45" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.65)">#9391BF</text>
+
+    <rect x="652" y="118" width="86" height="108" rx="8" fill="#585772" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+    <text x="664" y="144" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.9)">Asphalt-100</text>
+    <text x="664" y="158" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.6)">#585772</text>
+
+    <rect x="652" y="231" width="86" height="108" rx="8" fill="#3B3A4D" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="664" y="257" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.85)">Asphalt-300</text>
+    <text x="664" y="271" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.55)">#3B3A4D</text>
+
+    <rect x="652" y="344" width="86" height="108" rx="8" fill="#1D1D26" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <text x="664" y="370" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.8)">Asphalt-500</text>
+    <text x="664" y="384" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.5)">#1D1D26</text>
+
+    <rect x="652" y="457" width="86" height="108" rx="8" fill="#14141A" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="664" y="483" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.7)">Asphalt-600</text>
+    <text x="664" y="497" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.45)">#14141A</text>
+
+    <!-- ═══ COL 4: Red ═══  x=748 -->
+    <rect x="748" y="-108" width="86" height="108" rx="8" fill="#FEE3E3" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <text x="760" y="-82" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(0,0,0,0.55)">Red-50</text>
+    <text x="760" y="-68" font-family="monospace" font-size="8" fill="rgba(0,0,0,0.4)">#FEE3E3</text>
+
+    <rect x="748" y="5" width="86" height="108" rx="8" fill="#F58071" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="760" y="31" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.95)">Red-100</text>
+    <text x="760" y="45" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.7)">#F58071</text>
+
+    <rect x="748" y="118" width="86" height="108" rx="8" fill="#F5280F" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="760" y="144" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.95)">Red-500</text>
+    <text x="760" y="158" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.7)">#F5280F</text>
+
+    <rect x="748" y="231" width="86" height="108" rx="8" fill="#DB250D" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="760" y="257" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.9)">Red-600</text>
+    <text x="760" y="271" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.65)">#DB250D</text>
+
+    <rect x="748" y="344" width="86" height="108" rx="8" fill="#8F1809" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <text x="760" y="370" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.85)">Red-800</text>
+    <text x="760" y="384" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.55)">#8F1809</text>
+
+    <rect x="748" y="457" width="86" height="108" rx="8" fill="#751407" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="760" y="483" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.75)">Red-900</text>
+    <text x="760" y="497" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.45)">#751407</text>
+
+    <!-- ═══ COL 5: Crimson ═══  x=844 -->
+    <rect x="844" y="-108" width="86" height="108" rx="8" fill="#AD8484" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="856" y="-82" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.9)">Crimson-100</text>
+    <text x="856" y="-68" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.6)">#AD8484</text>
+
+    <rect x="844" y="5" width="86" height="108" rx="8" fill="#ED3C42" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="856" y="31" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.95)">Crimson-330</text>
+    <text x="856" y="45" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.7)">#ED3C42</text>
+
+    <rect x="844" y="118" width="86" height="108" rx="8" fill="#AD3C3C" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+    <text x="856" y="144" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.9)">Crimson-400</text>
+    <text x="856" y="158" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.65)">#AD3C3C</text>
+
+    <rect x="844" y="231" width="86" height="108" rx="8" fill="#943434" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="856" y="257" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.85)">Crimson-500</text>
+    <text x="856" y="271" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.55)">#943434</text>
+
+    <rect x="844" y="344" width="86" height="108" rx="8" fill="#612222" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <text x="856" y="370" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.8)">Crimson-700</text>
+    <text x="856" y="384" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.5)">#612222</text>
+
+    <rect x="844" y="457" width="86" height="108" rx="8" fill="#260D0D" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="856" y="483" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.7)">Crimson-900</text>
+    <text x="856" y="497" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.45)">#260D0D</text>
+
   </g>
 
-  <!-- ── ISOMETRIC CARD 2: Buttons (front, right) ── -->
-  <g filter="url(#shadow)">
-    <!-- Depth left strip -->
-    <polygon points="530,260 530,390 540,400 540,270" fill="rgba(0,0,0,0.4)"/>
-    <!-- Depth bottom strip -->
-    <polygon points="530,390 748,390 758,400 540,400" fill="rgba(0,0,0,0.25)"/>
-    <!-- Card face -->
-    <rect x="530" y="260" width="218" height="130" rx="12" fill="#111118" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
-    <!-- Primary btn -->
-    <rect x="548" y="278" width="84" height="28" rx="6" fill="rgba(255,255,255,0.9)"/>
-    <text x="590" y="297" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#0a0a0c" text-anchor="middle">Primary</text>
-    <!-- Brand btn -->
-    <rect x="642" y="278" width="84" height="28" rx="6" fill="#23D63E"/>
-    <text x="684" y="297" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#06240A" text-anchor="middle">Brand</text>
-    <!-- Ghost btn -->
-    <rect x="548" y="316" width="84" height="28" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-    <text x="590" y="335" font-family="Inter,system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.5)" text-anchor="middle">Ghost</text>
-    <!-- Danger btn -->
-    <rect x="642" y="316" width="84" height="28" rx="6" fill="rgba(245,40,15,0.1)" stroke="rgba(245,40,15,0.2)" stroke-width="1"/>
-    <text x="684" y="335" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#F58071" text-anchor="middle">Danger</text>
-    <!-- Pill badges -->
-    <rect x="548" y="356" width="48" height="18" rx="9" fill="rgba(35,214,62,0.1)" stroke="rgba(35,214,62,0.18)" stroke-width="1"/>
-    <text x="572" y="369" font-family="Inter,system-ui,sans-serif" font-size="9" fill="#23D63E" text-anchor="middle">Live</text>
-    <rect x="604" y="356" width="56" height="18" rx="9" fill="rgba(18,109,249,0.1)" stroke="rgba(18,109,249,0.18)" stroke-width="1"/>
-    <text x="632" y="369" font-family="Inter,system-ui,sans-serif" font-size="9" fill="#5ba4f9" text-anchor="middle">In review</text>
-    <rect x="668" y="356" width="58" height="18" rx="9" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-    <text x="697" y="369" font-family="Inter,system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)" text-anchor="middle">Neutral</text>
-  </g>
 
-  <!-- Bottom credits -->
-  <text x="52" y="472" font-family="Inter,system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.16)">Coyote · 2024 · 3 Figma libraries</text>
+  <!-- Title -->
+  <text x="52" y="196" font-family="Inter,system-ui,sans-serif" font-size="72" font-weight="800" letter-spacing="-3" fill="#ffffff">Copilote</text>
+  <text x="52" y="278" font-family="Inter,system-ui,sans-serif" font-size="72" font-weight="800" letter-spacing="-3" fill="#ffffff">Design</text>
+  <text x="52" y="360" font-family="Inter,system-ui,sans-serif" font-size="72" font-weight="800" letter-spacing="-3" fill="#ffffff">System</text>
+
+  <!-- Pills -->
+  <rect x="52" y="390" width="72" height="26" rx="13" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="88" y="408" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="500" fill="rgba(255,255,255,0.5)" text-anchor="middle">Colors</text>
+
+  <rect x="134" y="390" width="104" height="26" rx="13" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="186" y="408" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="500" fill="rgba(255,255,255,0.5)" text-anchor="middle">Typography</text>
+
+  <rect x="248" y="390" width="104" height="26" rx="13" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="300" y="408" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="500" fill="rgba(255,255,255,0.5)" text-anchor="middle">Components</text>
+
 </svg>
