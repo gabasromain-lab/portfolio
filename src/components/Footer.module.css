@@ -28,6 +28,7 @@
   background: radial-gradient(circle, rgba(75, 78, 255, 0.14) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
+  z-index: 0;
 }
 
 .ambientGlow2 {
@@ -40,12 +41,15 @@
   border-radius: 50%;
   pointer-events: none;
   filter: blur(20px);
+  z-index: 0;
 }
 
 /* Header */
 .headerGroup {
   text-align: center;
   margin-bottom: 48px;
+  position: relative;
+  z-index: 1;
 }
 
 .statusBadge {
@@ -113,6 +117,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .field {

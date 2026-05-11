@@ -10,12 +10,19 @@ const toolLogos = [
 
 const timeline = [
   {
-    period: '2022 — Present',
+    period: 'Currently',
+    company: 'Open to work',
+    role: 'Actively looking',
+    description: '',
+    tags: ['UI Design', 'Product Design', 'Paris', 'CDI'],
+    seeking: true,
+  },
+  {
+    period: '2022 — 2026',
     company: 'Coyote',
     role: 'Product Designer',
     description: 'Growth within a Design Studio environment. Complete redesign of the mobile app and design of the new COYOTE Max device. Full creation of a design system (atomic design) with Zeroheight, design tokens, and end-to-end design of a vehicle anti-theft security app.',
-    tags: ['Figma', 'Design System', 'Design Tokens', 'Zeroheight', 'Jira', 'Confluence'],
-    current: true,
+    tags: ['Sketch', 'Design System', 'Design Tokens', 'Zeroheight', 'Jira', 'Confluence'],
   },
   {
     period: '2021 — 2022',
@@ -48,18 +55,19 @@ export default function AboutSection() {
         <span className={styles.sectionLabel}>About me</span>
         <h2 className={styles.sectionTitle}>Experiences</h2>
 
-        <div className={styles.photoWrapper}>
-          <div className={styles.photoShape} />
+        <div className={styles.photoRow}>
           <div className={styles.photoFrame}>
-            <img src="/profile.jpg.png" alt="Romain Gabas" className={styles.photo} />
+            <img src="/selfie2.JPG" alt="Romain Gabas" className={styles.photo} />
+          </div>
+          <div className={styles.photoSideText}>
+            <p className={styles.bio}>
+              Product Designer based in Paris with 6+ years of experience across mobile, web,
+              and design systems. I turn complex product challenges into clear, human-centered
+              experiences — from early wireframes to production-ready interfaces.
+            </p>
           </div>
         </div>
 
-        <p className={styles.bio}>
-          Product Designer based in Paris with 6+ years of experience across mobile, web,
-          and design systems. I turn complex product challenges into clear, human-centered
-          experiences — from early wireframes to production-ready interfaces.
-        </p>
         <div className={styles.tags}>
           {['Design System', 'Design Thinking', 'Prototyping', 'Wireframing', 'User Research', 'UI Design', 'User Flow', 'Motion', '3D'].map(t => (
             <span key={t} className={styles.tag}>{t}</span>
@@ -81,12 +89,12 @@ export default function AboutSection() {
             <div key={i} className={styles.node}>
               <div className={styles.dateWrapper}>
                 <span className={styles.period}>{entry.period}</span>
-                {entry.current && <span className={styles.badge}>Now</span>}
+                {entry.seeking && <span className={styles.badgeSeeking}>Open</span>}
               </div>
-              <div className={`${styles.dot} ${entry.current ? styles.dotActive : ''}`}>
-                {entry.current && <span className={styles.dotPing} />}
+              <div className={`${styles.dot} ${entry.seeking ? styles.dotSeeking : ''}`}>
+                {entry.seeking && <span className={styles.dotPing} />}
               </div>
-              <div className={`${styles.card} ${entry.current ? styles.cardActive : ''}`}>
+              <div className={`${styles.card} ${entry.seeking ? styles.cardSeeking : ''}`}>
                 <p className={styles.company}>{entry.company}</p>
                 <p className={styles.role}>{entry.role}</p>
                 <p className={styles.desc}>{entry.description}</p>

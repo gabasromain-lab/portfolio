@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Copilote Design System</title>
+<link rel="stylesheet" href="/ds-tokens.css" />
+<link rel="stylesheet" href="/ds-styles.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div class="brand-meta">
+        <span class="brand-eyebrow">Copilote</span>
+        <span class="brand-title">Design System</span>
+      </div>
+    </div>
+
+    <nav class="nav-group">
+      <span class="nav-label">About</span>
+      <a class="nav-item" href="#methodology"><span class="nav-dot"></span>Methodology</a>
+    </nav>
+
+    <nav class="nav-group">
+      <span class="nav-label">Foundations</span>
+      <a class="nav-item" href="#colors"><span class="nav-dot"></span>Colors</a>
+      <a class="nav-item" href="#typography"><span class="nav-dot"></span>Typography</a>
+      <a class="nav-item" href="#space"><span class="nav-dot"></span>Space</a>
+      <a class="nav-item" href="#baseline"><span class="nav-dot"></span>Baseline</a>
+      <a class="nav-item" href="#radius"><span class="nav-dot"></span>Radius</a>
+      <a class="nav-item" href="#border"><span class="nav-dot"></span>Border</a>
+      <a class="nav-item" href="#elevation"><span class="nav-dot"></span>Elevation</a>
+    </nav>
+
+    <nav class="nav-group">
+      <span class="nav-label">Library</span>
+      <a class="nav-item" href="#buttons"><span class="nav-dot"></span>Buttons</a>
+      <a class="nav-item" href="#forms"><span class="nav-dot"></span>Forms</a>
+      <a class="nav-item" href="#feedback"><span class="nav-dot"></span>Feedback</a>
+      <a class="nav-item" href="#cards"><span class="nav-dot"></span>Cards</a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <span>v 1.0 · May 2026</span>
+      <span>Sourced from 3 linked Figma libraries</span>
+    </div>
+  </aside>
+
+  <!-- ========== MAIN ========== -->
+  <main class="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" data-screen-label="01 Cover">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Copilote · Design System</span>
+          <h1 class="hero-title">Copilote<br/><em>system.</em></h1>
+        </div>
+        <dl class="hero-meta">
+          <div>
+            <dt>Version</dt>
+            <dd>1.0</dd>
+          </div>
+          <div>
+            <dt>Updated</dt>
+            <dd>May 2026</dd>
+          </div>
+          <div>
+            <dt>Maintainer</dt>
+            <dd>Design Platform</dd>
+          </div>
+          <div>
+            <dt>Source</dt>
+            <dd>2 Figma libraries</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="hero-rule"></div>
+      <div class="hero-strip">
+        <div class="hero-strip-cell"><strong>132</strong><span>Color tokens</span></div>
+        <div class="hero-strip-cell"><strong>26</strong><span>Type styles</span></div>
+        <div class="hero-strip-cell"><strong>9</strong><span>Spaces</span></div>
+        <div class="hero-strip-cell"><strong>7</strong><span>Radii</span></div>
+        <div class="hero-strip-cell"><strong>8</strong><span>Borders</span></div>
+        <div class="hero-strip-cell"><strong>5</strong><span>Elevations</span></div>
+      </div>
+    </section>
+
+    <!-- ===== METHODOLOGY ===== -->
+    <section class="section" id="methodology" data-screen-label="02 Methodology">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">00 / About</span>
+          <h2 class="section-title">How we<br/><em>built it.</em></h2>
+        </div>
+        <p class="lead">A design system isn't a moodboard — it's a contract between design and engineering. Copilote was built bottom-up from raw values, structured into layered tokens, named by category, and stress-tested against real product surfaces before being released as a library.</p>
+      </div>
+
+      <!-- INTRO QUOTE + PRINCIPLES -->
+      <div class="method-intro">
+        <div>
+          <p class="method-quote">We didn't start with components. We started with the <em>smallest unit a designer can disagree about</em> — a hex, a pixel, a px-radius — and worked up from there.</p>
+          <p class="method-quote-meta">Design Platform · Kick-off note, Q3 2024</p>
+        </div>
+        <div class="method-principles">
+          <div class="method-principle">
+            <span class="method-principle-num">01</span>
+            <div>
+              <div class="method-principle-title">Tokens before components</div>
+              <p class="method-principle-desc">Every visual decision lives in a token. Components consume tokens; they never hard-code values. This makes a re-skin a config change, not a redesign.</p>
+            </div>
+          </div>
+          <div class="method-principle">
+            <span class="method-principle-num">02</span>
+            <div>
+              <div class="method-principle-title">One scale per dimension</div>
+              <p class="method-principle-desc">A single ramp for space, a single ramp for radius, a single ramp for elevation. No bespoke values. If a value isn't on the scale, it doesn't exist.</p>
+            </div>
+          </div>
+          <div class="method-principle">
+            <span class="method-principle-num">03</span>
+            <div>
+              <div class="method-principle-title">Names describe role, not look</div>
+              <p class="method-principle-desc">Semantic tokens (<code style="font-family:var(--font-mono);font-size:12px;">bg.surface</code>, <code style="font-family:var(--font-mono);font-size:12px;">fg.muted</code>) sit on top of raw color steps. Designers reach for the semantic; the raw is an implementation detail.</p>
+            </div>
+          </div>
+          <div class="method-principle">
+            <span class="method-principle-num">04</span>
+            <div>
+              <div class="method-principle-title">8px is the law</div>
+              <p class="method-principle-desc">Every spacing, sizing, and type leading value snaps to an 8px baseline. Vertical rhythm across screens stays consistent without anyone having to think about it.</p>
+            </div>
+          </div>
+          <div class="method-principle">
+            <span class="method-principle-num">05</span>
+            <div>
+              <div class="method-principle-title">Light first, dark in parity</div>
+              <p class="method-principle-desc">Surfaces, elevations and ink were designed for light, then mirrored on the Asphalt scale for dark. Every dark value has a light twin and vice versa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIBRARY STRUCTURE -->
+      <div style="margin-bottom: 32px; margin-top: 32px;">
+        <span class="eyebrow">Distribution · Library structure</span>
+        <h3 style="font-family:var(--font-display); font-size:40px; font-weight:400; letter-spacing:-0.02em; color:var(--asphalt-500); margin-top:8px;">Three files, one library</h3>
+        <p class="lead" style="margin-top:16px;">The system ships as three Figma files, each owning a single layer of the stack. They are <strong style="font-weight:500; color:var(--asphalt-500);">linked together as a library</strong> — components reference foundations, screens reference components, and a token edit propagates through every published file in one update.</p>
+      </div>
+
+      <div class="libfiles">
+        <div class="libfile is-foundations">
+          <span class="libfile-tab">File 01</span>
+          <div class="libfile-name">Library_Foundations.fig</div>
+          <div class="libfile-title">Foundations</div>
+          <p class="libfile-desc">The vocabulary. All design tokens — color, typography, space, radius, border, elevation — published as Figma styles and variables. No components, no usage examples; only raw values.</p>
+          <ul class="libfile-contents">
+            <li>132 color variables across 14 families</li>
+            <li>26 type styles (Kanit, Roboto Mono)</li>
+            <li>9 space, 7 radius, 8 border, 5 elevation tokens</li>
+            <li>Light + dark surface aliases</li>
+          </ul>
+          <span class="libfile-stat">Consumed by · all other files</span>
+        </div>
+        <div class="libfile is-icons">
+          <span class="libfile-tab">File 02</span>
+          <div class="libfile-name">Library_Iconography.fig</div>
+          <div class="libfile-title">Iconography</div>
+          <p class="libfile-desc">The pictogram set. Every icon drawn on a 24×24 grid using foundations stroke and corner tokens, published as components so a single edit propagates to every screen using it.</p>
+          <ul class="libfile-contents">
+            <li>24×24 base grid · 1.5px stroke</li>
+            <li>Outline + filled variants per icon</li>
+            <li>Currentcolor — adopts parent ink token</li>
+            <li>Searchable by name and category</li>
+          </ul>
+          <span class="libfile-stat">Links → Foundations</span>
+        </div>
+        <div class="libfile is-components">
+          <span class="libfile-tab">File 03</span>
+          <div class="libfile-name">Library_Components.fig</div>
+          <div class="libfile-title">Components</div>
+          <p class="libfile-desc">The library. Buttons, fields, cards, badges, toasts, navigation — every published component built only from foundations tokens and iconography components. The single source product designers consume.</p>
+          <ul class="libfile-contents">
+            <li>Buttons, forms, feedback, surfaces, navigation</li>
+            <li>Variants powered by Figma component properties</li>
+            <li>Auto-layout on every component</li>
+            <li>Light + dark via theme swap</li>
+          </ul>
+          <span class="libfile-stat">Links → Foundations + Iconography</span>
+        </div>
+      </div>
+
+      <div class="libchain">
+        <div>
+          <div class="libchain-eyebrow">Linked as a library</div>
+          <div class="libchain-title">A token edit in Foundations<br/>propagates everywhere.</div>
+        </div>
+        <div>
+          <div class="libchain-flow">
+            <span class="libchain-node">Library_Foundations.fig</span>
+            <span class="libchain-arrow">→</span>
+            <span class="libchain-node">Library_Iconography.fig</span>
+            <span class="libchain-arrow">→</span>
+            <span class="libchain-node">Library_Components.fig</span>
+            <span class="libchain-arrow">→</span>
+            <span class="libchain-node">Product files</span>
+          </div>
+          <p class="libchain-note">Each file is published as a Figma library and enabled in the next one downstream. Foundations is the only file with raw values; Iconography consumes color and stroke tokens; Components consume both. Product files import only Components, never reaching past it. Update once, ship everywhere.</p>
+        </div>
+      </div>
+
+      <!-- PROCESS -->
+      <div style="margin-bottom: 32px;">
+        <span class="eyebrow">The process · 6 phases</span>
+        <h3 style="font-family:var(--font-display); font-size:40px; font-weight:400; letter-spacing:-0.02em; color:var(--asphalt-500); margin-top:8px;">From audit to library</h3>
+      </div>
+      <div class="process">
+        <div class="process-step">
+          <span class="process-step-tag">Phase 01</span>
+          <div class="process-step-title">Audit</div>
+          <p class="process-step-desc">Catalogued every color, font, spacing and corner radius shipping in production. Found 47 distinct greys, 9 button styles, 14 radii. Confirmed the system was overdue.</p>
+          <span class="process-step-out">Output · Inventory map</span>
+        </div>
+        <div class="process-step">
+          <span class="process-step-tag">Phase 02</span>
+          <div class="process-step-title">Define ramps</div>
+          <p class="process-step-desc">Reduced each dimension to a single, intentional scale. 132 colors across 14 families, 9 spaces, 7 radii, 8 borders, 5 elevations. Every value on an 8px grid.</p>
+          <span class="process-step-out">Output · Raw token set</span>
+        </div>
+        <div class="process-step">
+          <span class="process-step-tag">Phase 03</span>
+          <div class="process-step-title">Name &amp; layer</div>
+          <p class="process-step-desc">Wrapped raw values in semantic tokens. Three-layer model: primitives → semantic → component. Naming convention agreed with engineering.</p>
+          <span class="process-step-out">Output · Token spec</span>
+        </div>
+        <div class="process-step">
+          <span class="process-step-tag">Phase 04</span>
+          <div class="process-step-title">Build components</div>
+          <p class="process-step-desc">Rebuilt the library from scratch using only semantic tokens. Buttons, fields, badges, cards, toasts. Every variant tied to a token, no exceptions.</p>
+          <span class="process-step-out">Output · Library v0</span>
+        </div>
+        <div class="process-step">
+          <span class="process-step-tag">Phase 05</span>
+          <div class="process-step-title">Stress test</div>
+          <p class="process-step-desc">Recreated five product flows using only the new library. Logged every gap, override and "I had to". 31 issues filed; 28 fixed at the token layer, not the component.</p>
+          <span class="process-step-out">Output · Issue log</span>
+        </div>
+        <div class="process-step">
+          <span class="process-step-tag">Phase 06</span>
+          <div class="process-step-title">Release</div>
+          <p class="process-step-desc">Published as Library_Foundations.fig + Library_Components.fig. Engineering mirror in CSS variables. Adoption playbook + governance model handed over.</p>
+          <span class="process-step-out">Output · v1.0 library</span>
+        </div>
+      </div>
+
+      <!-- LAYERED TOKEN MODEL -->
+      <div style="margin-bottom: 32px; margin-top: 32px;">
+        <span class="eyebrow">Architecture · Three-tier tokens</span>
+        <h3 style="font-family:var(--font-display); font-size:40px; font-weight:400; letter-spacing:-0.02em; color:var(--asphalt-500); margin-top:8px;">Layered, never flat</h3>
+      </div>
+      <div class="layers">
+        <div class="layers-stack">
+          <div class="layers-row is-l1">
+            <span class="layers-num">L1</span>
+            <div>
+              <div class="layers-name">Primitives</div>
+              <div class="layers-desc">Raw values. The whole alphabet of the system. Designers never reach for these directly.</div>
+            </div>
+            <div class="layers-example">asphalt-500: #1D1D26<br/>green-200: #23D63E<br/>space-large: 32px</div>
+          </div>
+          <div class="layers-row is-l2">
+            <span class="layers-num">L2</span>
+            <div>
+              <div class="layers-name">Semantic</div>
+              <div class="layers-desc">Role-based aliases. What the value means in a UI, not what it looks like. This is the layer designers and engineers use.</div>
+            </div>
+            <div class="layers-example">bg.surface → white<br/>fg.default → asphalt-500<br/>fg.brand → green-200</div>
+          </div>
+          <div class="layers-row is-l3">
+            <span class="layers-num">L3</span>
+            <div>
+              <div class="layers-name">Component</div>
+              <div class="layers-desc">Component-scoped tokens that resolve to semantics. Lets a component evolve its surface without leaking into the global vocabulary.</div>
+            </div>
+            <div class="layers-example">btn.primary.bg → fg.default<br/>btn.primary.fg → fg.inverse<br/>input.border → border.default</div>
+          </div>
+        </div>
+        <div class="layers-side">
+          <h4>Why three layers?</h4>
+          <p>A flat token set ages poorly. The day you decide brand green is now slightly more saturated, you don't want to chase down every component referencing <strong>green-200</strong> — you want to update one alias.</p>
+          <p>The semantic layer is the contract. Primitives can be retuned, components can be rebuilt; as long as <strong>fg.brand</strong> still means "the green our brand uses", everything downstream keeps working.</p>
+          <p>Component tokens are the escape hatch. When a single component needs a value the semantic layer doesn't yet expose, we add a component-scoped token rather than reaching into primitives.</p>
+        </div>
+      </div>
+
+      <!-- NAMING -->
+      <div style="margin-bottom: 32px; margin-top: 32px;">
+        <span class="eyebrow">Convention · Naming</span>
+        <h3 style="font-family:var(--font-display); font-size:40px; font-weight:400; letter-spacing:-0.02em; color:var(--asphalt-500); margin-top:8px;">Predictable by design</h3>
+      </div>
+      <div class="naming">
+        <div class="naming-spec">
+          <span class="naming-token is-cat">category</span>
+          <span class="naming-sep">·</span>
+          <span class="naming-token is-fam">family</span>
+          <span class="naming-sep">·</span>
+          <span class="naming-token is-step">step</span>
+        </div>
+        <div class="naming-legend">
+          <div class="naming-legend-item">
+            <span class="naming-legend-label">Category</span>
+            <span class="naming-legend-title">What kind of token</span>
+            <span class="naming-legend-desc">The dimension the token belongs to. Always one word, lowercase, plural where natural.</span>
+            <div class="naming-legend-examples">
+              <span class="tag-mono">color</span>
+              <span class="tag-mono">space</span>
+              <span class="tag-mono">radius</span>
+              <span class="tag-mono">elevation</span>
+              <span class="tag-mono">font</span>
+            </div>
+          </div>
+          <div class="naming-legend-item">
+            <span class="naming-legend-label">Family</span>
+            <span class="naming-legend-title">Which group inside</span>
+            <span class="naming-legend-desc">The named subset within the category. Brand-specific where the brand has opinions, generic where it doesn't.</span>
+            <div class="naming-legend-examples">
+              <span class="tag-mono">asphalt</span>
+              <span class="tag-mono">green</span>
+              <span class="tag-mono">red</span>
+              <span class="tag-mono">small</span>
+              <span class="tag-mono">x1</span>
+            </div>
+          </div>
+          <div class="naming-legend-item">
+            <span class="naming-legend-label">Step</span>
+            <span class="naming-legend-title">Where on the scale</span>
+            <span class="naming-legend-desc">A number for color steps (5–950, lower = lighter), or a t-shirt size for spacing &amp; radii, or omitted when the family is itself the step.</span>
+            <div class="naming-legend-examples">
+              <span class="tag-mono">5 / 50 / 500</span>
+              <span class="tag-mono">tiny → massive</span>
+              <span class="tag-mono">xs → xl</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DECISIONS -->
+      <div style="margin-bottom: 32px; margin-top: 32px;">
+        <span class="eyebrow">Trade-offs · What we chose &amp; why</span>
+        <h3 style="font-family:var(--font-display); font-size:40px; font-weight:400; letter-spacing:-0.02em; color:var(--asphalt-500); margin-top:8px;">Decisions on the record</h3>
+      </div>
+      <div class="decisions">
+        <div class="decision">
+          <div class="decision-head"><span class="dot"></span>Decided</div>
+          <div class="decision-title">Asphalt instead of pure black for ink</div>
+          <p class="decision-rationale">Pure black on white is harsh and rarely the right choice on screen. Asphalt-500 (#1D1D26) carries a hint of blue, sits softer against white, and pairs naturally with the brand green.</p>
+          <div class="decision-meta">Affects · all body text, all borders, all dark surfaces</div>
+        </div>
+        <div class="decision">
+          <div class="decision-head"><span class="dot"></span>Decided</div>
+          <div class="decision-title">Kanit as the single typeface</div>
+          <p class="decision-rationale">One family, five weights, used from 11px legal text up to 110px display. A single typeface kept the system tight and made type pairing a non-question. Roboto Mono for tokens and code only.</p>
+          <div class="decision-meta">Affects · 26 type styles, all components</div>
+        </div>
+        <div class="decision">
+          <div class="decision-head"><span class="dot"></span>Decided</div>
+          <div class="decision-title">T-shirt sizes for space, numeric for color</div>
+          <p class="decision-rationale">Spacing names (<span class="tag-mono">tiny</span>, <span class="tag-mono">small</span>, <span class="tag-mono">large</span>) read intuitively in conversation. Color steps stay numeric (50, 100, 500) because designers do reason about lightness as a number — and the numeric ordering survives palette extension.</p>
+          <div class="decision-meta">Affects · token names across the system</div>
+        </div>
+        <div class="decision">
+          <div class="decision-head is-no"><span class="dot"></span>Rejected</div>
+          <div class="decision-title">A separate dark-mode token set</div>
+          <p class="decision-rationale">We considered <span class="tag-mono">color.bg.surface.dark</span> shadow tokens. Rejected — the Asphalt scale already encodes the dark surfaces. Themes flip the semantic alias, not the token set. One source of truth, two appearances.</p>
+          <div class="decision-meta">Trade · simplicity over theme flexibility</div>
+        </div>
+        <div class="decision">
+          <div class="decision-head is-no"><span class="dot"></span>Rejected</div>
+          <div class="decision-title">Per-component spacing scales</div>
+          <p class="decision-rationale">Tempting to give Cards their own padding ramp. Rejected — once one component gets a private scale, every component asks. The 9-step global ramp is enough; constraint forces consistency.</p>
+          <div class="decision-meta">Trade · uniformity over per-component freedom</div>
+        </div>
+        <div class="decision">
+          <div class="decision-head is-no"><span class="dot"></span>Rejected</div>
+          <div class="decision-title">Free-form drop shadows</div>
+          <p class="decision-rationale">Five elevation steps. No offset, no spread, no per-component shadow values. Depth is communicated by intensity, not by a custom recipe each time. Anything that needs a different shadow needs a design conversation, not a new value.</p>
+          <div class="decision-meta">Trade · clarity over expressive depth</div>
+        </div>
+      </div>
+
+      <div class="section-footnote">
+        <div>
+          <div class="fn-label">Sourced from</div>
+          <div class="fn-value">Library_Foundations.fig<br/>Library_Iconography.fig<br/>Library_Components.fig</div>
+        </div>
+        <div>
+          <div class="fn-label">Time to v1.0</div>
+          <div class="fn-value">11 weeks · 4 designers, 2 engineers</div>
+        </div>
+        <div>
+          <div class="fn-label">Maintenance model</div>
+          <div class="fn-value">RFC + monthly review · contributions open</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COLORS ===== -->
+    <section class="section" id="colors" data-screen-label="02 Colors">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">01 / Foundations</span>
+          <h2 class="section-title">Colors</h2>
+        </div>
+        <p class="lead">A 14-family palette with neutrals, brand greens, an Asphalt scale for surfaces and text, and supporting families for status, accent and editorial use.</p>
+      </div>
+
+      <div class="palette-grid">
+
+        <div class="palette">
+          <h3 class="palette-name">Asphalt</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#EAEFFD"></div><div class="swatch-text"><span class="swatch-name">asphalt-5</span><span class="swatch-hex">#EAEFFD</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#C0BFD3"></div><div class="swatch-text"><span class="swatch-name">asphalt-10</span><span class="swatch-hex">#C0BFD3</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#9391BF"></div><div class="swatch-text"><span class="swatch-name">asphalt-25</span><span class="swatch-hex">#9391BF</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#7F7EA6"></div><div class="swatch-text"><span class="swatch-name">asphalt-50</span><span class="swatch-hex">#7F7EA6</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#6C6B8C"></div><div class="swatch-text"><span class="swatch-name">asphalt-75</span><span class="swatch-hex">#6C6B8C</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#585772"></div><div class="swatch-text"><span class="swatch-name">asphalt-100</span><span class="swatch-hex">#585772</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#454459"></div><div class="swatch-text"><span class="swatch-name">asphalt-200</span><span class="swatch-hex">#454459</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#3B3A4D"></div><div class="swatch-text"><span class="swatch-name">asphalt-300</span><span class="swatch-hex">#3B3A4D</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#272733"></div><div class="swatch-text"><span class="swatch-name">asphalt-400</span><span class="swatch-hex">#272733</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#1D1D26"></div><div class="swatch-text"><span class="swatch-name">asphalt-500</span><span class="swatch-hex">#1D1D26</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#14141A"></div><div class="swatch-text"><span class="swatch-name">asphalt-600</span><span class="swatch-hex">#14141A</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Neutral</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#FFFFFF"></div><div class="swatch-text"><span class="swatch-name">white</span><span class="swatch-hex">#FFFFFF</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#FBFBFB"></div><div class="swatch-text"><span class="swatch-name">grey-10</span><span class="swatch-hex">#FBFBFB</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#F2F2F2"></div><div class="swatch-text"><span class="swatch-name">grey-25</span><span class="swatch-hex">#F2F2F2</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#E6E6E6"></div><div class="swatch-text"><span class="swatch-name">grey-50</span><span class="swatch-hex">#E6E6E6</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#D9D9D9"></div><div class="swatch-text"><span class="swatch-name">grey-75</span><span class="swatch-hex">#D9D9D9</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#CCCCCC"></div><div class="swatch-text"><span class="swatch-name">grey-100</span><span class="swatch-hex">#CCCCCC</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#B3B3B3"></div><div class="swatch-text"><span class="swatch-name">grey-200</span><span class="swatch-hex">#B3B3B3</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#999999"></div><div class="swatch-text"><span class="swatch-name">grey-400</span><span class="swatch-hex">#999999</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#666666"></div><div class="swatch-text"><span class="swatch-name">grey-600</span><span class="swatch-hex">#666666</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#333333"></div><div class="swatch-text"><span class="swatch-name">grey-800</span><span class="swatch-hex">#333333</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#000000"></div><div class="swatch-text"><span class="swatch-name">black</span><span class="swatch-hex">#000000</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Green · brand</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#D2FDD8"></div><div class="swatch-text"><span class="swatch-name">green-5</span><span class="swatch-hex">#D2FDD8</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#56FF70"></div><div class="swatch-text"><span class="swatch-name">green-50</span><span class="swatch-hex">#56FF70</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#26F045"></div><div class="swatch-text"><span class="swatch-name">green-100</span><span class="swatch-hex">#26F045</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#23D63E"></div><div class="swatch-text"><span class="swatch-name">green-200</span><span class="swatch-hex">#23D63E</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#1EBD36"></div><div class="swatch-text"><span class="swatch-name">green-300</span><span class="swatch-hex">#1EBD36</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#1AA32F"></div><div class="swatch-text"><span class="swatch-name">green-400</span><span class="swatch-hex">#1AA32F</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#168A27"></div><div class="swatch-text"><span class="swatch-name">green-500</span><span class="swatch-hex">#168A27</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#127020"></div><div class="swatch-text"><span class="swatch-name">green-600</span><span class="swatch-hex">#127020</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#0E5719"></div><div class="swatch-text"><span class="swatch-name">green-700</span><span class="swatch-hex">#0E5719</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#0A3D12"></div><div class="swatch-text"><span class="swatch-name">green-800</span><span class="swatch-hex">#0A3D12</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#06240A"></div><div class="swatch-text"><span class="swatch-name">green-900</span><span class="swatch-hex">#06240A</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Blue</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#126DF9"></div><div class="swatch-text"><span class="swatch-name">blue-100</span><span class="swatch-hex">#126DF9</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#1063E0"></div><div class="swatch-text"><span class="swatch-name">blue-200</span><span class="swatch-hex">#1063E0</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#0E58C7"></div><div class="swatch-text"><span class="swatch-name">blue-300</span><span class="swatch-hex">#0E58C7</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#0C4DAD"></div><div class="swatch-text"><span class="swatch-name">blue-400</span><span class="swatch-hex">#0C4DAD</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#0A4194"></div><div class="swatch-text"><span class="swatch-name">blue-500</span><span class="swatch-hex">#0A4194</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#09367A"></div><div class="swatch-text"><span class="swatch-name">blue-600</span><span class="swatch-hex">#09367A</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#072B61"></div><div class="swatch-text"><span class="swatch-name">blue-700</span><span class="swatch-hex">#072B61</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#052047"></div><div class="swatch-text"><span class="swatch-name">blue-800</span><span class="swatch-hex">#052047</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#03142E"></div><div class="swatch-text"><span class="swatch-name">blue-900</span><span class="swatch-hex">#03142E</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Red · danger</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#FEE3E3"></div><div class="swatch-text"><span class="swatch-name">red-50</span><span class="swatch-hex">#FEE3E3</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#FF9F92"></div><div class="swatch-text"><span class="swatch-name">red-75</span><span class="swatch-hex">#FF9F92</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#F58071"></div><div class="swatch-text"><span class="swatch-name">red-100</span><span class="swatch-hex">#F58071</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#F56A58"></div><div class="swatch-text"><span class="swatch-name">red-200</span><span class="swatch-hex">#F56A58</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#F55540"></div><div class="swatch-text"><span class="swatch-name">red-300</span><span class="swatch-hex">#F55540</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#F53F27"></div><div class="swatch-text"><span class="swatch-name">red-400</span><span class="swatch-hex">#F53F27</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#F5280F"></div><div class="swatch-text"><span class="swatch-name">red-500</span><span class="swatch-hex">#F5280F</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#DB250D"></div><div class="swatch-text"><span class="swatch-name">red-600</span><span class="swatch-hex">#DB250D</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#C2210C"></div><div class="swatch-text"><span class="swatch-name">red-700</span><span class="swatch-hex">#C2210C</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#8F1809"></div><div class="swatch-text"><span class="swatch-name">red-800</span><span class="swatch-hex">#8F1809</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#751407"></div><div class="swatch-text"><span class="swatch-name">red-900</span><span class="swatch-hex">#751407</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Crimson</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#AD8484"></div><div class="swatch-text"><span class="swatch-name">crimson-100</span><span class="swatch-hex">#AD8484</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#AD7272"></div><div class="swatch-text"><span class="swatch-name">crimson-200</span><span class="swatch-hex">#AD7272</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#AD5F5F"></div><div class="swatch-text"><span class="swatch-name">crimson-300</span><span class="swatch-hex">#AD5F5F</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#ED3C42"></div><div class="swatch-text"><span class="swatch-name">crimson-330</span><span class="swatch-hex">#ED3C42</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#CA373C"></div><div class="swatch-text"><span class="swatch-name">crimson-350</span><span class="swatch-hex">#CA373C</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#AD3C3C"></div><div class="swatch-text"><span class="swatch-name">crimson-400</span><span class="swatch-hex">#AD3C3C</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#943434"></div><div class="swatch-text"><span class="swatch-name">crimson-500</span><span class="swatch-hex">#943434</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#7A2B2B"></div><div class="swatch-text"><span class="swatch-name">crimson-600</span><span class="swatch-hex">#7A2B2B</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#612222"></div><div class="swatch-text"><span class="swatch-name">crimson-700</span><span class="swatch-hex">#612222</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#471919"></div><div class="swatch-text"><span class="swatch-name">crimson-800</span><span class="swatch-hex">#471919</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#260D0D"></div><div class="swatch-text"><span class="swatch-name">crimson-900</span><span class="swatch-hex">#260D0D</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Orange</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#FF9E67"></div><div class="swatch-text"><span class="swatch-name">orange-75</span><span class="swatch-hex">#FF9E67</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#FF8B4D"></div><div class="swatch-text"><span class="swatch-name">orange-100</span><span class="swatch-hex">#FF8B4D</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#FF7A33"></div><div class="swatch-text"><span class="swatch-name">orange-200</span><span class="swatch-hex">#FF7A33</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#FF6A19"></div><div class="swatch-text"><span class="swatch-name">orange-300</span><span class="swatch-hex">#FF6A19</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#FF5800"></div><div class="swatch-text"><span class="swatch-name">orange-400</span><span class="swatch-hex">#FF5800</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Gold</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#FA8C32"></div><div class="swatch-text"><span class="swatch-name">gold-100</span><span class="swatch-hex">#FA8C32</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#FB811A"></div><div class="swatch-text"><span class="swatch-name">gold-200</span><span class="swatch-hex">#FB811A</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#E68200"></div><div class="swatch-text"><span class="swatch-name">gold-300</span><span class="swatch-hex">#E68200</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#CC7400"></div><div class="swatch-text"><span class="swatch-name">gold-400</span><span class="swatch-hex">#CC7400</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#B36500"></div><div class="swatch-text"><span class="swatch-name">gold-500</span><span class="swatch-hex">#B36500</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Yellow</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#FFCB00"></div><div class="swatch-text"><span class="swatch-name">yellow-100</span><span class="swatch-hex">#FFCB00</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#E6B800"></div><div class="swatch-text"><span class="swatch-name">yellow-200</span><span class="swatch-hex">#E6B800</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#CCA300"></div><div class="swatch-text"><span class="swatch-name">yellow-300</span><span class="swatch-hex">#CCA300</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#B38F00"></div><div class="swatch-text"><span class="swatch-name">yellow-400</span><span class="swatch-hex">#B38F00</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Turquoise</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#33FEA1"></div><div class="swatch-text"><span class="swatch-name">turquoise-100</span><span class="swatch-hex">#33FEA1</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#2EE693"></div><div class="swatch-text"><span class="swatch-name">turquoise-200</span><span class="swatch-hex">#2EE693</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#29CC83"></div><div class="swatch-text"><span class="swatch-name">turquoise-300</span><span class="swatch-hex">#29CC83</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Emerald</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#EAFEED"></div><div class="swatch-text"><span class="swatch-name">emerald-5</span><span class="swatch-hex">#EAFEED</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#4D7167"></div><div class="swatch-text"><span class="swatch-name">emerald-600</span><span class="swatch-hex">#4D7167</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Purple</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#CD6BFF"></div><div class="swatch-text"><span class="swatch-name">purple-20</span><span class="swatch-hex">#CD6BFF</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#BD3CFF"></div><div class="swatch-text"><span class="swatch-name">purple-50</span><span class="swatch-hex">#BD3CFF</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#835C94"></div><div class="swatch-text"><span class="swatch-name">purple-100</span><span class="swatch-hex">#835C94</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Blue darker</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#555C79"></div><div class="swatch-text"><span class="swatch-name">bluedarker-200</span><span class="swatch-hex">#555C79</span></div></div>
+          <div class="swatch"><div class="swatch-chip" style="background:#2E3244"></div><div class="swatch-text"><span class="swatch-name">bluedarker-500</span><span class="swatch-hex">#2E3244</span></div></div>
+        </div>
+
+        <div class="palette">
+          <h3 class="palette-name">Pantone</h3>
+          <div class="swatch"><div class="swatch-chip" style="background:#EAE5DB"></div><div class="swatch-text"><span class="swatch-name">pantone-100</span><span class="swatch-hex">#EAE5DB</span></div></div>
+        </div>
+
+      </div>
+
+      <div class="section-footnote">
+        <div><div class="fn-label">Total tokens</div><div class="fn-value">132 colors</div></div>
+        <div><div class="fn-label">Token format</div><div class="fn-value"><span class="tag-mono">cds.color.{family}.{tone}</span></div></div>
+        <div><div class="fn-label">Default text</div><div class="fn-value">asphalt-500 on grey-10</div></div>
+      </div>
+    </section>
+
+    <!-- ===== TYPOGRAPHY ===== -->
+    <section class="section" id="typography" data-screen-label="03 Typography">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">02 / Foundations</span>
+          <h2 class="section-title">Type<em>scale</em></h2>
+        </div>
+        <p class="lead">Kanit is the system font: a low-contrast geometric sans with five weights. Six display sizes (X1–X6) anchor editorial moments; H1–H4 carry sections, Body L–XXS handle the rest. Tracking tightens with size.</p>
+      </div>
+
+      <div class="type-table">
+
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Extra X1</span><span class="type-meta-spec">110 / Medium</span></div>
+          <div class="type-sample t-x1">Aa</div>
+          <div class="type-token"><span class="tag-mono">cds.font.X1</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Extra X2</span><span class="type-meta-spec">100 / Medium</span></div>
+          <div class="type-sample t-x2">Aa</div>
+          <div class="type-token"><span class="tag-mono">cds.font.X2</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Extra X3</span><span class="type-meta-spec">83 / Medium</span></div>
+          <div class="type-sample t-x3">The future is bright.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.X3</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Extra X4</span><span class="type-meta-spec">65 / Medium</span></div>
+          <div class="type-sample t-x4">The future is bright.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.X4</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Extra X5</span><span class="type-meta-spec">54 / Medium</span></div>
+          <div class="type-sample t-x5">The future is bright.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.X5</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Extra X6</span><span class="type-meta-spec">45 / Medium</span></div>
+          <div class="type-sample t-x6">The future is bright.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.X6</span></div>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">H1 Regular</span><span class="type-meta-spec">40 / Regular</span></div>
+          <div class="type-sample t-h1">Drive every metric forward.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.H1.regular</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">H1 Medium</span><span class="type-meta-spec">40 / Medium</span></div>
+          <div class="type-sample t-h1-m">Drive every metric forward.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.H1.medium</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">H2 Regular</span><span class="type-meta-spec">32 / Regular</span></div>
+          <div class="type-sample t-h2">Drive every metric forward.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.H2.regular</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">H2 Medium</span><span class="type-meta-spec">32 / Medium</span></div>
+          <div class="type-sample t-h2-m">Drive every metric forward.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.H2.medium</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">H3 Regular</span><span class="type-meta-spec">28 / Regular</span></div>
+          <div class="type-sample t-h3">Drive every metric forward.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.H3.regular</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">H3 Medium</span><span class="type-meta-spec">28 / Medium</span></div>
+          <div class="type-sample t-h3-m">Drive every metric forward.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.H3.medium</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">H4 Regular</span><span class="type-meta-spec">22 / Regular</span></div>
+          <div class="type-sample t-h4">Drive every metric forward.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.H4.regular</span></div>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Body L Medium</span><span class="type-meta-spec">20 / Medium</span></div>
+          <div class="type-sample t-bodyL-m">An intentionally chosen, gradient-free direction.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.bodyL.medium</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Body L Regular</span><span class="type-meta-spec">20 / Regular</span></div>
+          <div class="type-sample t-bodyL">An intentionally chosen, gradient-free direction.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.bodyL.regular</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Body L Lite</span><span class="type-meta-spec">20 / Light</span></div>
+          <div class="type-sample t-bodyL-l">An intentionally chosen, gradient-free direction.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.bodyL.lite</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Body M Regular</span><span class="type-meta-spec">16 / Regular</span></div>
+          <div class="type-sample t-bodyM">A geometric sans with a low contrast and warm aperture, Kanit reads neutral at any size.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.bodyM.regular</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Body M Lite</span><span class="type-meta-spec">16 / Light</span></div>
+          <div class="type-sample t-bodyM-l">A geometric sans with a low contrast and warm aperture, Kanit reads neutral at any size.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.bodyM.lite</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Body S Regular</span><span class="type-meta-spec">14 / Regular</span></div>
+          <div class="type-sample t-bodyS">Used for inline metadata, helper text, and dense data tables where information density matters.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.bodyS.regular</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Body S Lite</span><span class="type-meta-spec">14 / Light</span></div>
+          <div class="type-sample t-bodyS-l">Used for inline metadata, helper text, and dense data tables where information density matters.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.bodyS.lite</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Body XS Regular</span><span class="type-meta-spec">12 / Regular</span></div>
+          <div class="type-sample t-bodyXS">Captions, micro-labels, supplementary annotations attached to charts.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.bodyXS.regular</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Body XS Lite</span><span class="type-meta-spec">12 / Light</span></div>
+          <div class="type-sample t-bodyXS-l">Captions, micro-labels, supplementary annotations attached to charts.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.bodyXS.lite</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Body XXS</span><span class="type-meta-spec">11 / Regular</span></div>
+          <div class="type-sample t-bodyXXS">Footnote-grade text. Use sparingly — only where space genuinely demands it.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.bodyXXS.regular</span></div>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Subtitle M Medium</span><span class="type-meta-spec">17 / Medium</span></div>
+          <div class="type-sample t-subtitleM-m">A clarifying line beneath a heading.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.subtitleM.medium</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Subtitle M Lite</span><span class="type-meta-spec">17 / Light</span></div>
+          <div class="type-sample t-subtitleM">A clarifying line beneath a heading.</div>
+          <div class="type-token"><span class="tag-mono">cds.font.subtitleM.lite</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Subtitle S</span><span class="type-meta-spec">14 / Medium · 0.04 tracking</span></div>
+          <div class="type-sample t-subtitleS">SECTION OR CATEGORY MARKER</div>
+          <div class="type-token"><span class="tag-mono">cds.font.subtitleS</span></div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><span class="type-meta-label">Tagline</span><span class="type-meta-spec">12 / Medium · 0.18 tracking</span></div>
+          <div class="type-sample t-tagline">Eyebrow / tagline</div>
+          <div class="type-token"><span class="tag-mono">cds.font.tagline</span></div>
+        </div>
+      </div>
+
+      <div class="section-footnote">
+        <div><div class="fn-label">Family</div><div class="fn-value">Kanit · 5 weights · variable</div></div>
+        <div><div class="fn-label">Mono companion</div><div class="fn-value">Roboto Mono — for tokens & code</div></div>
+        <div><div class="fn-label">Numerals</div><div class="fn-value">Tabular by default</div></div>
+      </div>
+    </section>
+
+    <!-- ===== SPACE ===== -->
+    <section class="section" id="space" data-screen-label="04 Space">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">03 / Foundations</span>
+          <h2 class="section-title">Space</h2>
+        </div>
+        <p class="lead">A nine-step scale, all multiples of four. <span class="tag-mono">small</span> and <span class="tag-mono">medium</span> handle most padding; <span class="tag-mono">huge</span> and up are reserved for section rhythm.</p>
+      </div>
+
+      <div class="space-stack">
+        <div class="space-row"><span class="v">4 px</span><span class="tag-mono">cds.space.xtiny</span><div class="space-bar" style="width:4px"></div></div>
+        <div class="space-row"><span class="v">8 px</span><span class="tag-mono">cds.space.tiny</span><div class="space-bar" style="width:8px"></div></div>
+        <div class="space-row"><span class="v">16 px</span><span class="tag-mono">cds.space.small</span><div class="space-bar" style="width:16px"></div></div>
+        <div class="space-row"><span class="v">24 px</span><span class="tag-mono">cds.space.medium</span><div class="space-bar" style="width:24px"></div></div>
+        <div class="space-row"><span class="v">32 px</span><span class="tag-mono">cds.space.large</span><div class="space-bar" style="width:32px"></div></div>
+        <div class="space-row"><span class="v">40 px</span><span class="tag-mono">cds.space.huge</span><div class="space-bar" style="width:40px"></div></div>
+        <div class="space-row"><span class="v">48 px</span><span class="tag-mono">cds.space.xhuge</span><div class="space-bar" style="width:48px"></div></div>
+        <div class="space-row"><span class="v">64 px</span><span class="tag-mono">cds.space.massive</span><div class="space-bar" style="width:64px"></div></div>
+        <div class="space-row"><span class="v">80 px</span><span class="tag-mono">cds.space.xmassive</span><div class="space-bar" style="width:80px"></div></div>
+      </div>
+    </section>
+
+    <!-- ===== BASELINE ===== -->
+    <section class="section" id="baseline" data-screen-label="05 Baseline">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">04 / Foundations</span>
+          <h2 class="section-title">8&nbsp;px<em> baseline.</em></h2>
+        </div>
+        <p class="lead">All vertical metrics — line-heights, paddings, component heights — round to an 8&nbsp;px multiple. Type scales align to the grid via half-leaded line boxes.</p>
+      </div>
+
+      <div class="baseline-frame">
+        <div class="baseline-content">
+          <h3 class="t-h2-m">Aligned to 8&nbsp;px</h3>
+          <p class="t-bodyL-l" style="max-width: 60ch;">Each line of body text occupies a multiple of 8&nbsp;px so paragraphs stack predictably alongside form controls, list rows, and tables. The visible blue grid tracks every increment.</p>
+          <div class="row" style="margin-top: 8px;">
+            <button class="btn btn--primary">Continue</button>
+            <button class="btn btn--secondary">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RADIUS ===== -->
+    <section class="section" id="radius" data-screen-label="06 Radius">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">05 / Foundations</span>
+          <h2 class="section-title">Radius</h2>
+        </div>
+        <p class="lead">Seven steps from <span class="tag-mono">none</span> to <span class="tag-mono">full</span>. Use <span class="tag-mono">small</span> for inputs and buttons, <span class="tag-mono">medium</span> for cards, <span class="tag-mono">full</span> for pills and avatars.</p>
+      </div>
+
+      <div class="radius-grid">
+        <div class="radius-cell">
+          <div class="radius-shape" style="border-radius: 0;"></div>
+          <div class="meta"><strong style="font-family: var(--font-display); font-weight: 500;">0</strong><br><span class="tag-mono">none</span></div>
+        </div>
+        <div class="radius-cell">
+          <div class="radius-shape" style="border-radius: 2px;"></div>
+          <div class="meta"><strong style="font-family: var(--font-display); font-weight: 500;">2</strong><br><span class="tag-mono">tiny</span></div>
+        </div>
+        <div class="radius-cell">
+          <div class="radius-shape" style="border-radius: 8px;"></div>
+          <div class="meta"><strong style="font-family: var(--font-display); font-weight: 500;">8</strong><br><span class="tag-mono">small</span></div>
+        </div>
+        <div class="radius-cell">
+          <div class="radius-shape" style="border-radius: 16px;"></div>
+          <div class="meta"><strong style="font-family: var(--font-display); font-weight: 500;">16</strong><br><span class="tag-mono">medium</span></div>
+        </div>
+        <div class="radius-cell">
+          <div class="radius-shape" style="border-radius: 32px;"></div>
+          <div class="meta"><strong style="font-family: var(--font-display); font-weight: 500;">32</strong><br><span class="tag-mono">large</span></div>
+        </div>
+        <div class="radius-cell">
+          <div class="radius-shape" style="border-radius: 48px;"></div>
+          <div class="meta"><strong style="font-family: var(--font-display); font-weight: 500;">48</strong><br><span class="tag-mono">xlarge</span></div>
+        </div>
+        <div class="radius-cell">
+          <div class="radius-shape" style="border-radius: 9999px;"></div>
+          <div class="meta"><strong style="font-family: var(--font-display); font-weight: 500;">100%</strong><br><span class="tag-mono">full</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BORDER ===== -->
+    <section class="section" id="border" data-screen-label="07 Border">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">06 / Foundations</span>
+          <h2 class="section-title">Border</h2>
+        </div>
+        <p class="lead">Eight stroke weights for dividers, focus rings, framed media and emphasis lines. Defaults: <span class="tag-mono">tiny</span> for separators, <span class="tag-mono">small</span> for inputs, <span class="tag-mono">medium</span>+ for editorial accents.</p>
+      </div>
+
+      <div class="border-grid">
+        <div class="border-cell"><div class="border-line-wrap"></div><div class="meta" style="text-align:center;"><strong style="font-family:var(--font-display);font-weight:500;">0</strong><br><span class="tag-mono">none</span></div></div>
+        <div class="border-cell"><div class="border-line-wrap"><div class="border-line" style="height:1px;"></div></div><div class="meta" style="text-align:center;"><strong style="font-family:var(--font-display);font-weight:500;">1</strong><br><span class="tag-mono">tiny</span></div></div>
+        <div class="border-cell"><div class="border-line-wrap"><div class="border-line" style="height:2px;"></div></div><div class="meta" style="text-align:center;"><strong style="font-family:var(--font-display);font-weight:500;">2</strong><br><span class="tag-mono">small</span></div></div>
+        <div class="border-cell"><div class="border-line-wrap"><div class="border-line" style="height:3px;"></div></div><div class="meta" style="text-align:center;"><strong style="font-family:var(--font-display);font-weight:500;">3</strong><br><span class="tag-mono">medium</span></div></div>
+        <div class="border-cell"><div class="border-line-wrap"><div class="border-line" style="height:4px;"></div></div><div class="meta" style="text-align:center;"><strong style="font-family:var(--font-display);font-weight:500;">4</strong><br><span class="tag-mono">large</span></div></div>
+        <div class="border-cell"><div class="border-line-wrap"><div class="border-line" style="height:5px;"></div></div><div class="meta" style="text-align:center;"><strong style="font-family:var(--font-display);font-weight:500;">5</strong><br><span class="tag-mono">xlarge</span></div></div>
+        <div class="border-cell"><div class="border-line-wrap"><div class="border-line" style="height:6px;"></div></div><div class="meta" style="text-align:center;"><strong style="font-family:var(--font-display);font-weight:500;">6</strong><br><span class="tag-mono">xxlarge</span></div></div>
+        <div class="border-cell"><div class="border-line-wrap"><div class="border-line" style="height:9px;"></div></div><div class="meta" style="text-align:center;"><strong style="font-family:var(--font-display);font-weight:500;">9</strong><br><span class="tag-mono">huge</span></div></div>
+      </div>
+    </section>
+
+    <!-- ===== ELEVATION (DARK) ===== -->
+    <section class="section is-dark" id="elevation" data-screen-label="08 Elevation">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">07 / Foundations</span>
+          <h2 class="section-title" style="color: var(--white);">Elevation</h2>
+        </div>
+        <p class="lead">Five non-offset shadows. Blur grows; opacity falls. The result reads as ambient lift rather than directional drop, which works equally well in light and dark surfaces.</p>
+      </div>
+
+      <div>
+        <div class="elev-row" style="border-top: 1px solid var(--asphalt-300);">
+          <span class="v" style="color: var(--asphalt-25);">Value</span>
+          <span class="v" style="color: var(--asphalt-25);">Token</span>
+          <span class="v" style="color: var(--asphalt-25);">Shadow</span>
+          <span class="v" style="color: var(--asphalt-25); text-align:right;">Sample</span>
+        </div>
+        <div class="elev-row">
+          <span class="v">xs</span>
+          <span><span class="tag-mono" style="background: var(--asphalt-300); color: var(--white);">elevation.xs</span></span>
+          <span class="v">0 0 4 0 · α 60</span>
+          <div class="elev-shape" style="box-shadow: 0 0 4px 0 rgba(0,0,0,0.6); margin-left:auto;"></div>
+        </div>
+        <div class="elev-row">
+          <span class="v">s</span>
+          <span><span class="tag-mono" style="background: var(--asphalt-300); color: var(--white);">elevation.s</span></span>
+          <span class="v">0 0 8 0 · α 50</span>
+          <div class="elev-shape" style="box-shadow: 0 0 8px 0 rgba(0,0,0,0.5); margin-left:auto;"></div>
+        </div>
+        <div class="elev-row">
+          <span class="v">m</span>
+          <span><span class="tag-mono" style="background: var(--asphalt-300); color: var(--white);">elevation.m</span></span>
+          <span class="v">0 0 12 0 · α 40</span>
+          <div class="elev-shape" style="box-shadow: 0 0 12px 0 rgba(0,0,0,0.4); margin-left:auto;"></div>
+        </div>
+        <div class="elev-row">
+          <span class="v">l</span>
+          <span><span class="tag-mono" style="background: var(--asphalt-300); color: var(--white);">elevation.l</span></span>
+          <span class="v">0 0 16 0 · α 30</span>
+          <div class="elev-shape" style="box-shadow: 0 0 16px 0 rgba(0,0,0,0.3); margin-left:auto;"></div>
+        </div>
+        <div class="elev-row">
+          <span class="v">xl</span>
+          <span><span class="tag-mono" style="background: var(--asphalt-300); color: var(--white);">elevation.xl</span></span>
+          <span class="v">0 0 20 0 · α 20</span>
+          <div class="elev-shape" style="box-shadow: 0 0 20px 0 rgba(0,0,0,0.2); margin-left:auto;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BUTTONS ===== -->
+    <section class="section" id="buttons" data-screen-label="09 Buttons">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">01 / Library</span>
+          <h2 class="section-title">Buttons</h2>
+        </div>
+        <p class="lead">Four intents (primary, secondary, ghost, brand) and a destructive variant. Sizes <span class="tag-mono">sm · md · lg</span> map to 32 / 40 / 48 px height.</p>
+      </div>
+
+      <div class="comp-grid">
+
+        <div class="comp-card">
+          <div class="comp-card-head">
+            <h3 class="comp-card-title">Intent</h3>
+            <span class="comp-card-sub">5 variants</span>
+          </div>
+          <div class="preview-canvas">
+            <button class="btn btn--primary">Primary action</button>
+            <button class="btn btn--secondary">Secondary</button>
+            <button class="btn btn--ghost">Ghost</button>
+            <button class="btn btn--brand">Brand</button>
+            <button class="btn btn--danger">Delete</button>
+          </div>
+        </div>
+
+        <div class="comp-card">
+          <div class="comp-card-head">
+            <h3 class="comp-card-title">Size</h3>
+            <span class="comp-card-sub">sm · md · lg</span>
+          </div>
+          <div class="preview-canvas">
+            <button class="btn btn--primary btn--sm">Small</button>
+            <button class="btn btn--primary">Medium</button>
+            <button class="btn btn--primary btn--lg">Large</button>
+          </div>
+        </div>
+
+        <div class="comp-card">
+          <div class="comp-card-head">
+            <h3 class="comp-card-title">Pill</h3>
+            <span class="comp-card-sub">radius.full</span>
+          </div>
+          <div class="preview-canvas">
+            <button class="btn btn--primary btn--pill">Continue</button>
+            <button class="btn btn--secondary btn--pill">Skip for now</button>
+            <button class="btn btn--brand btn--pill">Activate</button>
+          </div>
+        </div>
+
+        <div class="comp-card">
+          <div class="comp-card-head">
+            <h3 class="comp-card-title">Disabled</h3>
+            <span class="comp-card-sub">opacity 0.4</span>
+          </div>
+          <div class="preview-canvas">
+            <button class="btn btn--primary" disabled style="opacity:.4; cursor: not-allowed;">Primary</button>
+            <button class="btn btn--secondary" disabled style="opacity:.4; cursor: not-allowed;">Secondary</button>
+            <button class="btn btn--brand" disabled style="opacity:.4; cursor: not-allowed;">Brand</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== FORMS ===== -->
+    <section class="section" id="forms" data-screen-label="10 Forms">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">02 / Library</span>
+          <h2 class="section-title">Forms</h2>
+        </div>
+        <p class="lead">Inputs, selects and toggles share the 40&nbsp;px control height, <span class="tag-mono">radius.small</span>, and an asphalt-500 focus ring at α 0.08.</p>
+      </div>
+
+      <div class="comp-grid">
+
+        <div class="comp-card">
+          <div class="comp-card-head">
+            <h3 class="comp-card-title">Text input</h3>
+            <span class="comp-card-sub">3 states</span>
+          </div>
+          <div class="col" style="gap: 16px;">
+            <div class="field">
+              <label class="field-label">Email</label>
+              <input class="input" type="email" placeholder="you@company.com" />
+              <span class="field-hint">We'll never share this.</span>
+            </div>
+            <div class="field">
+              <label class="field-label">Password</label>
+              <input class="input" type="password" value="••••••••••" />
+              <span class="field-hint">8+ chars, one number.</span>
+            </div>
+            <div class="field field-error">
+              <label class="field-label">Workspace handle</label>
+              <input class="input" type="text" value="my workspace" />
+              <span class="field-hint">No spaces allowed in handles.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-card">
+          <div class="comp-card-head">
+            <h3 class="comp-card-title">Select &amp; textarea</h3>
+            <span class="comp-card-sub">native + styled</span>
+          </div>
+          <div class="col" style="gap: 16px;">
+            <div class="field">
+              <label class="field-label">Region</label>
+              <select class="select">
+                <option>Europe — Frankfurt</option>
+                <option>Americas — Virginia</option>
+                <option>Asia — Tokyo</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label">Notes</label>
+              <textarea class="textarea" rows="4" placeholder="A short description…"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-card">
+          <div class="comp-card-head">
+            <h3 class="comp-card-title">Toggle</h3>
+            <span class="comp-card-sub">on/off</span>
+          </div>
+          <div class="col">
+            <div class="row" style="justify-content: space-between;">
+              <div>
+                <div class="t-bodyM" style="color:var(--asphalt-500); font-weight:500;">Email digest</div>
+                <div class="t-bodyS-l muted">Weekly summary on Mondays.</div>
+              </div>
+              <div class="switch is-on" data-toggle></div>
+            </div>
+            <div class="row" style="justify-content: space-between;">
+              <div>
+                <div class="t-bodyM" style="color:var(--asphalt-500); font-weight:500;">Beta features</div>
+                <div class="t-bodyS-l muted">Opt in to early releases.</div>
+              </div>
+              <div class="switch" data-toggle></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-card">
+          <div class="comp-card-head">
+            <h3 class="comp-card-title">Composed form</h3>
+            <span class="comp-card-sub">grid · 16 px gap</span>
+          </div>
+          <form class="col" onsubmit="event.preventDefault();">
+            <div class="row" style="gap:16px;">
+              <div class="field" style="flex:1;">
+                <label class="field-label">First name</label>
+                <input class="input" value="Léa" />
+              </div>
+              <div class="field" style="flex:1;">
+                <label class="field-label">Last name</label>
+                <input class="input" value="Marchand" />
+              </div>
+            </div>
+            <div class="field">
+              <label class="field-label">Workspace</label>
+              <input class="input" value="copilote-ds" />
+            </div>
+            <div class="row" style="justify-content:flex-end; gap: 12px;">
+              <button class="btn btn--ghost">Cancel</button>
+              <button class="btn btn--primary">Save changes</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== FEEDBACK ===== -->
+    <section class="section" id="feedback" data-screen-label="11 Feedback">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">03 / Library</span>
+          <h2 class="section-title">Feedback</h2>
+        </div>
+        <p class="lead">Status surfaces drawn from the palette: badges for inline state, toasts for transient confirmation, banners for persistent notice.</p>
+      </div>
+
+      <div class="comp-grid">
+
+        <div class="comp-card">
+          <div class="comp-card-head">
+            <h3 class="comp-card-title">Badges</h3>
+            <span class="comp-card-sub">6 intents</span>
+          </div>
+          <div class="preview-canvas">
+            <span class="badge badge--neutral"><span style="width:6px;height:6px;border-radius:99px;background:currentColor;opacity:.7;"></span>Neutral</span>
+            <span class="badge badge--info"><span style="width:6px;height:6px;border-radius:99px;background:currentColor;opacity:.7;"></span>Info</span>
+            <span class="badge badge--success"><span style="width:6px;height:6px;border-radius:99px;background:currentColor;opacity:.7;"></span>Live</span>
+            <span class="badge badge--warn"><span style="width:6px;height:6px;border-radius:99px;background:currentColor;opacity:.7;"></span>Pending</span>
+            <span class="badge badge--danger"><span style="width:6px;height:6px;border-radius:99px;background:currentColor;opacity:.7;"></span>Failed</span>
+            <span class="badge badge--brand"><span style="width:6px;height:6px;border-radius:99px;background:currentColor;opacity:.7;"></span>New</span>
+          </div>
+        </div>
+
+        <div class="comp-card">
+          <div class="comp-card-head">
+            <h3 class="comp-card-title">Toasts</h3>
+            <span class="comp-card-sub">elevation.l</span>
+          </div>
+          <div class="preview-canvas" style="flex-direction: column; align-items: stretch;">
+            <div class="toast">
+              <span class="toast-dot"></span>
+              <div class="toast-body">
+                <span class="toast-title">Workspace renamed</span>
+                <span class="toast-msg">Old links will keep redirecting for 30 days.</span>
+              </div>
+            </div>
+            <div class="toast toast--success">
+              <span class="toast-dot"></span>
+              <div class="toast-body">
+                <span class="toast-title">Synced 12 files to staging</span>
+                <span class="toast-msg">Last build passed in 1m 42s.</span>
+              </div>
+            </div>
+            <div class="toast toast--danger">
+              <span class="toast-dot"></span>
+              <div class="toast-body">
+                <span class="toast-title">Couldn't reach the API</span>
+                <span class="toast-msg">We'll retry in 30 seconds.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CARDS ===== -->
+    <section class="section" id="cards" data-screen-label="12 Cards">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">04 / Library</span>
+          <h2 class="section-title">Cards</h2>
+        </div>
+        <p class="lead">Three card densities. All sit on <span class="tag-mono">elevation.s</span>, with <span class="tag-mono">radius.medium</span> corners and 20–32&nbsp;px padding.</p>
+      </div>
+
+      <div class="comp-grid" style="grid-template-columns: repeat(3, 1fr);">
+
+        <article class="card-demo">
+          <span class="card-demo-eyebrow">Forecast</span>
+          <h3 class="card-demo-title">Q3 deployment cadence</h3>
+          <p class="card-demo-text">Two weekly windows, paused around the EU holiday block. 14 services on the roadmap.</p>
+          <div class="row" style="justify-content: space-between; margin-top: 4px;">
+            <span class="badge badge--success">On track</span>
+            <span class="muted" style="font-size:12px;">Updated · 2h ago</span>
+          </div>
+        </article>
+
+        <article class="card-demo">
+          <span class="card-demo-eyebrow">Project</span>
+          <h3 class="card-demo-title">Mobile · Onboarding rebuild</h3>
+          <p class="card-demo-text">Migrating the legacy welcome flow onto the new component set. 6 of 9 screens shipped.</p>
+          <div class="row" style="justify-content: space-between; margin-top: 4px;">
+            <span class="badge badge--info">In review</span>
+            <span class="muted" style="font-size:12px;">3 contributors</span>
+          </div>
+        </article>
+
+        <article class="card-demo">
+          <span class="card-demo-eyebrow">Incident</span>
+          <h3 class="card-demo-title">Auth latency spike — EU</h3>
+          <p class="card-demo-text">P95 climbed past 800ms between 14:02 and 14:11. Root caused to a noisy neighbour.</p>
+          <div class="row" style="justify-content: space-between; margin-top: 4px;">
+            <span class="badge badge--danger">Resolved</span>
+            <span class="muted" style="font-size:12px;">Postmortem · ↗</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== CLOSING ===== -->
+    <section class="section is-dark" data-screen-label="13 Closing">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" style="color: var(--asphalt-25);">Documentation · v 1.0</span>
+          <h2 class="section-title" style="color: var(--white);">A system,<br/><em style="color: var(--green-200);">not a kit.</em></h2>
+        </div>
+        <p class="lead">Every component on this page is built from the same handful of tokens shown above. Change a value once at the root, and it propagates everywhere.</p>
+      </div>
+
+      <div class="row" style="gap: 12px;">
+        <button class="btn btn--brand">Open in Figma</button>
+        <button class="btn btn--secondary" style="background: transparent; color: var(--white); border-color: var(--asphalt-200);">Download tokens.json</button>
+        <button class="btn btn--ghost" style="color: var(--asphalt-15);">Read changelog</button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // active nav state on scroll
+  const navItems = [...document.querySelectorAll('.nav-item')];
+  const sections = navItems.map(a => document.querySelector(a.getAttribute('href')));
+  const setActive = () => {
+    const y = window.scrollY + 200;
+    let activeIdx = 0;
+    sections.forEach((s, i) => { if (s && s.offsetTop <= y) activeIdx = i; });
+    navItems.forEach((n, i) => n.classList.toggle('is-active', i === activeIdx));
+  };
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+
+  // toggle switch
+  document.querySelectorAll('[data-toggle]').forEach(el => {
+    el.addEventListener('click', () => el.classList.toggle('is-on'));
+  });
+</script>
+
+</body>
+</html>

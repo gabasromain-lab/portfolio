@@ -1,0 +1,245 @@
+/* ============================================
+   COPILOTE DESIGN SYSTEM — TOKENS
+   Sourced from Library_Foundations.fig
+   ============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* ---------- ASPHALT (primary text + dark backgrounds) ---------- */
+  --asphalt-5: #EAEFFD;
+  --asphalt-10: #C0BFD3;
+  --asphalt-15: #BEBCE6;
+  --asphalt-25: #9391BF;
+  --asphalt-50: #7F7EA6;
+  --asphalt-75: #6C6B8C;
+  --asphalt-100: #585772;
+  --asphalt-200: #454459;
+  --asphalt-300: #3B3A4D;
+  --asphalt-350: #313040;
+  --asphalt-375: #2F3344;
+  --asphalt-400: #272733;
+  --asphalt-450: #22222D;
+  --asphalt-475: #24242A;
+  --asphalt-500: #1D1D26;
+  --asphalt-600: #14141A;
+
+  /* ---------- NEUTRAL ---------- */
+  --white: #FFFFFF;
+  --grey-10: #FBFBFB;
+  --grey-15: #F9F9F9;
+  --grey-25: #F2F2F2;
+  --grey-40: #E8E8E8;
+  --grey-50: #E6E6E6;
+  --grey-75: #D9D9D9;
+  --grey-100: #CCCCCC;
+  --grey-150: #BFBFBF;
+  --grey-200: #B3B3B3;
+  --grey-300: #A6A6A6;
+  --grey-400: #999999;
+  --grey-500: #8C8C8C;
+  --grey-600: #666666;
+  --grey-700: #4D4D4D;
+  --grey-800: #333333;
+  --grey-900: #1A1A1A;
+  --black: #000000;
+
+  /* ---------- BLUE ---------- */
+  --blue-100: #126DF9;
+  --blue-200: #1063E0;
+  --blue-300: #0E58C7;
+  --blue-400: #0C4DAD;
+  --blue-500: #0A4194;
+  --blue-600: #09367A;
+  --blue-700: #072B61;
+  --blue-800: #052047;
+  --blue-900: #03142E;
+
+  /* ---------- BLUE DARKER ---------- */
+  --bluedarker-200: #555C79;
+  --bluedarker-500: #2E3244;
+
+  /* ---------- TURQUOISE ---------- */
+  --turquoise-100: #33FEA1;
+  --turquoise-200: #2EE693;
+  --turquoise-300: #29CC83;
+
+  /* ---------- EMERALD ---------- */
+  --emerald-5: #EAFEED;
+  --emerald-600: #4D7167;
+
+  /* ---------- GREEN (success / brand mark) ---------- */
+  --green-5: #D2FDD8;
+  --green-50: #56FF70;
+  --green-100: #26F045;
+  --green-200: #23D63E;
+  --green-300: #1EBD36;
+  --green-400: #1AA32F;
+  --green-500: #168A27;
+  --green-600: #127020;
+  --green-700: #0E5719;
+  --green-800: #0A3D12;
+  --green-900: #06240A;
+  --green-950: #021504;
+
+  /* ---------- RED (danger) ---------- */
+  --red-50: #FEE3E3;
+  --red-75: #FF9F92;
+  --red-100: #F58071;
+  --red-200: #F56A58;
+  --red-250: #F66051;
+  --red-300: #F55540;
+  --red-400: #F53F27;
+  --red-500: #F5280F;
+  --red-550: #E8342F;
+  --red-600: #DB250D;
+  --red-700: #C2210C;
+  --red-750: #B10C0C;
+  --red-800: #8F1809;
+  --red-900: #751407;
+
+  /* ---------- CRIMSON ---------- */
+  --crimson-100: #AD8484;
+  --crimson-200: #AD7272;
+  --crimson-300: #AD5F5F;
+  --crimson-330: #ED3C42;
+  --crimson-340: #FE4444;
+  --crimson-350: #CA373C;
+  --crimson-400: #AD3C3C;
+  --crimson-500: #943434;
+  --crimson-600: #7A2B2B;
+  --crimson-700: #612222;
+  --crimson-800: #471919;
+  --crimson-900: #260D0D;
+
+  /* ---------- ORANGE ---------- */
+  --orange-75: #FF9E67;
+  --orange-100: #FF8B4D;
+  --orange-200: #FF7A33;
+  --orange-300: #FF6A19;
+  --orange-400: #FF5800;
+
+  /* ---------- GOLD ---------- */
+  --gold-100: #FA8C32;
+  --gold-200: #FB811A;
+  --gold-300: #E68200;
+  --gold-400: #CC7400;
+  --gold-500: #B36500;
+
+  /* ---------- YELLOW ---------- */
+  --yellow-100: #FFCB00;
+  --yellow-200: #E6B800;
+  --yellow-300: #CCA300;
+  --yellow-400: #B38F00;
+
+  /* ---------- PURPLE ---------- */
+  --purple-20: #CD6BFF;
+  --purple-50: #BD3CFF;
+  --purple-100: #835C94;
+
+  /* ---------- PANTONE ---------- */
+  --pantone-100: #EAE5DB;
+
+  /* ============================================
+     SPACING — 8px baseline grid
+     ============================================ */
+  --space-xtiny: 4px;
+  --space-tiny: 8px;
+  --space-small: 16px;
+  --space-medium: 24px;
+  --space-large: 32px;
+  --space-huge: 40px;
+  --space-xhuge: 48px;
+  --space-massive: 64px;
+  --space-xmassive: 80px;
+
+  /* ============================================
+     RADIUS
+     ============================================ */
+  --radius-none: 0;
+  --radius-tiny: 2px;
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 32px;
+  --radius-xlarge: 48px;
+  --radius-full: 9999px;
+
+  /* ============================================
+     BORDER WIDTH
+     ============================================ */
+  --border-none: 0;
+  --border-tiny: 1px;
+  --border-small: 2px;
+  --border-medium: 3px;
+  --border-large: 4px;
+  --border-xlarge: 5px;
+  --border-xxlarge: 6px;
+  --border-huge: 9px;
+
+  /* ============================================
+     ELEVATION
+     ============================================ */
+  --elevation-xs: 0 0 4px 0 rgba(166, 166, 166, 0.60);
+  --elevation-s: 0 0 8px 0 rgba(166, 166, 166, 0.50);
+  --elevation-m: 0 0 12px 0 rgba(166, 166, 166, 0.40);
+  --elevation-l: 0 0 16px 0 rgba(166, 166, 166, 0.30);
+  --elevation-xl: 0 0 20px 0 rgba(166, 166, 166, 0.20);
+
+  --elevation-dark-xs: 0 0 4px 0 rgba(26, 26, 26, 0.60);
+  --elevation-dark-s: 0 0 8px 0 rgba(26, 26, 26, 0.50);
+  --elevation-dark-m: 0 0 12px 0 rgba(26, 26, 26, 0.40);
+  --elevation-dark-l: 0 0 16px 0 rgba(26, 26, 26, 0.30);
+  --elevation-dark-xl: 0 0 20px 0 rgba(26, 26, 26, 0.20);
+
+  /* ============================================
+     TYPOGRAPHY — Kanit family
+     ============================================ */
+  --font-display: "Kanit", "Inter", system-ui, sans-serif;
+  --font-body: "Kanit", "Inter", system-ui, sans-serif;
+  --font-mono: "Roboto Mono", "Courier New", monospace;
+
+  /* Display Extras */
+  --font-x1-size: 110px; --font-x1-weight: 500;
+  --font-x2-size: 100px; --font-x2-weight: 500;
+  --font-x3-size: 83px;  --font-x3-weight: 500;
+  --font-x4-size: 65px;  --font-x4-weight: 500;
+  --font-x5-size: 54px;  --font-x5-weight: 500;
+  --font-x6-size: 45px;  --font-x6-weight: 500;
+
+  /* Headings */
+  --font-h1-size: 40px;
+  --font-h2-size: 32px;
+  --font-h3-size: 28px;
+  --font-h4-size: 22px;
+
+  /* Body */
+  --font-bodyL-size: 20px;
+  --font-bodyM-size: 16px;
+  --font-bodyS-size: 14px;
+  --font-bodyXS-size: 12px;
+  --font-bodyXXS-size: 11px;
+
+  /* Subtitle */
+  --font-subtitleM-size: 17px;
+  --font-subtitleS-size: 14px;
+  --font-tagline-size: 12px;
+
+  /* ============================================
+     SEMANTIC TOKENS (light)
+     ============================================ */
+  --bg-canvas: var(--grey-10);
+  --bg-surface: var(--white);
+  --bg-subtle: var(--grey-25);
+  --bg-muted: var(--grey-40);
+  --bg-inverse: var(--asphalt-500);
+
+  --fg-default: var(--asphalt-500);
+  --fg-muted: var(--asphalt-100);
+  --fg-subtle: var(--asphalt-75);
+  --fg-inverse: var(--white);
+  --fg-brand: var(--green-200);
+
+  --border-default: var(--grey-50);
+  --border-subtle: var(--grey-40);
+  --border-strong: var(--asphalt-25);
+}

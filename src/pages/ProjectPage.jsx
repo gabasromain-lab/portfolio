@@ -8,12 +8,16 @@ import ColorsSlide from '../components/ColorsSlide'
 import IconographySlide from '../components/IconographySlide'
 import UIScreensSlide from '../components/UIScreensSlide'
 import WireframeScroll from '../components/WireframeScroll'
+import KPISlide from '../components/KPISlide'
+import DesignSystemPage from './DesignSystemPage'
 import styles from './ProjectPage.module.css'
 
 export default function ProjectPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const project = projects.find(p => p.slug === slug)
+
+  if (project?.dsEmbed) return <DesignSystemPage src={project.dsEmbed} />
   const currentIndex = projects.findIndex(p => p.slug === slug)
   const nextProject = projects[(currentIndex + 1) % projects.length]
 
@@ -136,16 +140,51 @@ export default function ProjectPage() {
 
       <main>
         <section className={`${styles.section} ${styles.heroSection}`}>
-          <div className={styles.sysBadge}>PRESENTATION MODE ACTIVE</div>
-          <h1 className={styles.megaTitle}>{project.title}</h1>
-          <p className={styles.heroSub}>{project.tags.join(' · ')}</p>
-          {project.intro && (
-            <p className={styles.heroIntro}>
-              {project.intro.split('\n').map((line, i, arr) => (
-                <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
-              ))}
-            </p>
-          )}
+          <div className={project.mockups?.left?.length || project.mockups?.right?.length ? styles.heroLayout : ''}>
+            {project.mockups?.left?.length > 0 && (
+              <div className={styles.heroMockup}>
+                <img src={project.mockups.left[0]} alt="" className={styles.mockupSide} />
+              </div>
+            )}
+            <div className={styles.heroText}>
+              <h1 className={styles.megaTitle}>{project.title}</h1>
+              <p className={styles.heroSub}>{project.tags.join(' · ')}</p>
+              {project.intro && (
+                <p className={styles.heroIntro}>
+                  {project.intro.split('\n').map((line, i, arr) => (
+                    <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+                  ))}
+                </p>
+              )}
+              {project.scope && (
+                <div className={styles.scopeRow}>
+                  <div className={styles.scopeItem}>
+                    <span className={styles.scopeLabel}>Team</span>
+                    <span className={styles.scopeValue}>{project.scope.team}</span>
+                  </div>
+                  <div className={styles.scopeDivider} />
+                  <div className={styles.scopeItem}>
+                    <span className={styles.scopeLabel}>Coworking with</span>
+                    <span className={styles.scopeValue}>{project.scope.coworking.join(' · ')}</span>
+                  </div>
+                  {project.scope.device && (
+                    <>
+                      <div className={styles.scopeDivider} />
+                      <div className={styles.scopeItem}>
+                        <span className={styles.scopeLabel}>Device</span>
+                        <span className={styles.scopeValue}>{project.scope.device}</span>
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
+            {project.mockups?.right?.length > 0 && (
+              <div className={styles.heroMockup}>
+                <img src={project.mockups.right[0]} alt="" className={`${styles.mockupSide} ${styles.mockupSideRight}`} />
+              </div>
+            )}
+          </div>
         </section>
 
         {project.slides.map((slide, i) => (
@@ -162,6 +201,16 @@ export default function ProjectPage() {
               <div className={styles.wireframeLayout}>
                 <UIScreensSlide trackRef={uiscreensTrackRef} />
                 <div className={styles.wireframeCaptionFloat}>
+                  <h4>{slide.number} / {slide.title}</h4>
+                  <p>{slide.text}</p>
+                </div>
+              </div>
+            ) : slide.type === 'kpi' ? (
+              <div className={styles.userflowLayout}>
+                <div className={styles.userflowContent}>
+                  <KPISlide kpis={slide.kpis} />
+                </div>
+                <div className={styles.captionCardSide}>
                   <h4>{slide.number} / {slide.title}</h4>
                   <p>{slide.text}</p>
                 </div>

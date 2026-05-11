@@ -1,12 +1,21 @@
 export const projects = [
   {
     slug: 'bike-tracker',
-    image: '/Desktop - 1.png',
+    image: '/mockups/cover_secure.png',
     alt: 'Secure Rider',
     tags: ['UI Design', 'Coyote', '2023'],
     title: 'Secure Rider',
     description: 'A secure mobile application for real-time motorcycle tracking, combining live GPS data with a clean, minimal interface built for riders on the go.',
     intro: 'Specific mobile app for riders who care about their bike\'s security. Built for both iOS and Android.',
+    scope: {
+      team: 'Studio design',
+      coworking: ['Lead Design', 'Dev iOS Android', 'PM', 'PO'],
+      device: 'Mobile',
+    },
+    mockups: {
+      left: ['/mockups/mockupsecure3.PNG'],
+      right: ['/mockups/mockup4.png'],
+    },
     featured: true,
     slides: [
       {
@@ -53,8 +62,29 @@ export const projects = [
         title: 'UI Screens',
         text: 'Final high-fidelity screens across all core flows — customizable alert schedules, live surveillance states, alert triggers, and full event history.',
       },
+      {
+        type: 'kpi',
+        number: '08',
+        title: 'Results',
+        text: 'Key metrics collected right before launch — validating design decisions through real user data.',
+        kpis: [
+          { value: '96%', label: 'Customer Satisfaction', sub: 'Post-launch user satisfaction score' },
+          { value: '97%', label: 'Task Success Rate', sub: 'Users completing tasks during test phase' },
+          { value: '5.6s', label: 'Avg. Completion Time', sub: 'Average time to complete a specific scenario' },
+          { value: '8%', label: 'Churn Rate', sub: 'Testers lost over a given period' },
+        ],
+      },
     ],
     summary: 'A mobile-first bike tracker that makes real-time security feel effortless — clean UI, instant alerts, and GPS precision in the palm of your hand.',
+  },
+  {
+    slug: 'coyote-design-system',
+    image: '/mockups/cover_ds.svg',
+    alt: 'Copilote Design System',
+    tags: ['Design System', 'Coyote', '2024'],
+    title: 'Copilote Design System',
+    description: 'A full token-based design system for Coyote — built bottom-up from raw values, structured into layered tokens, and stress-tested against real product surfaces.',
+    dsEmbed: '/ds-copilote.html',
   },
   {
     slug: 'luminal-wealth',

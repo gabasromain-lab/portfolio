@@ -7,7 +7,13 @@
       "PowerShell([System.Environment]::GetEnvironmentVariable\\(\"ANTHROPIC_API_KEY\", \"User\"\\))",
       "PowerShell($env:ANTHROPIC_API_KEY = [System.Environment]::GetEnvironmentVariable\\(\"ANTHROPIC_API_KEY\", \"User\"\\); & \"C:\\\\Users\\\\roman\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python314\\\\python.exe\" -c \"import anthropic; client = anthropic.Anthropic\\(\\); r = client.messages.create\\(model='claude-haiku-4-5-20251001', max_tokens=10, messages=[{'role':'user','content':'dis juste ok'}]\\); print\\(r.content[0].text\\)\")",
       "PowerShell(schtasks /create /tn \"JobAlertQuotidien\" /tr \"d:\\\\romain-gabas-portfolio\\\\lancer_job_alert.bat\" /sc daily /st 08:00 /f)",
-      "PowerShell(schtasks /create /tn \"JobAlertQuotidien\" /tr \"d:\\\\romain-gabas-portfolio\\\\lancer_job_alert.bat\" /sc daily /st 09:00 /f)"
+      "PowerShell(schtasks /create /tn \"JobAlertQuotidien\" /tr \"d:\\\\romain-gabas-portfolio\\\\lancer_job_alert.bat\" /sc daily /st 09:00 /f)",
+      "PowerShell(& \"C:\\\\Users\\\\roman\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python314\\\\python.exe\" -m pip install google-genai)",
+      "PowerShell([System.Environment]::SetEnvironmentVariable\\(\"GEMINI_API_KEY\", \"AIzaSyB-5AvdUYbLSmg8YNoyYGT58TFziB8UiDs\", \"User\"\\))",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(cp \"C:/Users/roman/.claude/projects/d--romain-gabas-portfolio/e003004e-cc43-461b-8f33-9ca7556f2db3/tool-results/ds-test/project/tokens.css\" \"d:/romain-gabas-portfolio/public/ds-tokens.css\")",
+      "Bash(cp \"C:/Users/roman/.claude/projects/d--romain-gabas-portfolio/e003004e-cc43-461b-8f33-9ca7556f2db3/tool-results/ds-test/project/styles.css\" \"d:/romain-gabas-portfolio/public/ds-styles.css\")",
+      "Bash(cp \"C:/Users/roman/.claude/projects/d--romain-gabas-portfolio/e003004e-cc43-461b-8f33-9ca7556f2db3/tool-results/ds-test/project/Copilote Design System.html\" \"d:/romain-gabas-portfolio/public/ds-copilote.html\")"
     ],
     "additionalDirectories": [
       "d:\\",
