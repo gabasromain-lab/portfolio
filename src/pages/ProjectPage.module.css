@@ -391,7 +391,7 @@
 /* Wireframe section override */
 .wireframeSection {
   padding: 80px !important;
-  overflow: hidden;
+  overflow: clip;
 }
 
 /* Wireframe layout */
