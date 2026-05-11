@@ -22,7 +22,7 @@ body {
   background-color: var(--bg-haze);
   font-family: var(--font-ui);
   color: var(--text-main);
-  overflow-x: hidden;
+  overflow-x: clip;
   line-height: 1.5;
 }
 
