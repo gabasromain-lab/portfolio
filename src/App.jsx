@@ -33,24 +33,19 @@ function HomePage() {
           </div>
         </div>
 
-        {featured && (
+        {projects.map(p => (
           <FeaturedProject
-            slug={featured.slug}
-            title={featured.title}
-            description={featured.description}
-            tags={featured.tags}
-            image={featured.image}
-            alt={featured.alt}
-            mockup={featured.mockup}
-            screens={featured.screens}
+            key={p.slug}
+            slug={p.slug}
+            title={p.title}
+            description={p.description}
+            tags={p.tags}
+            image={p.image}
+            alt={p.alt}
+            mockup={p.mockup}
+            screens={p.screens}
           />
-        )}
-
-        <div className={styles.projectGrid}>
-          {grid.map(p => (
-            <ProjectCard key={p.title} {...p} />
-          ))}
-        </div>
+        ))}
 
         <AboutSection />
         <Footer />
