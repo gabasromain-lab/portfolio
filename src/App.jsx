@@ -22,8 +22,6 @@ function HomePage() {
         <div className={styles.glassSquare1} />
         <div className={styles.glassSquare2} />
       </div>
-      <div className={styles.grainOverlay} />
-
       <Nav />
       <Hero />
 
