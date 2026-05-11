@@ -10,13 +10,20 @@
   align-items: center;
   gap: 8px;
   padding: 6px;
-  background: rgba(14, 14, 20, 0.82);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  will-change: backdrop-filter;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-pill);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.nav::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(14, 14, 20, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 .glowLine {
