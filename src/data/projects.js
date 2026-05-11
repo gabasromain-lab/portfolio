@@ -86,6 +86,9 @@ export const projects = [
     description: 'A full token-based design system for Coyote — built bottom-up from raw values, structured into layered tokens, and stress-tested against real product surfaces.',
     dsEmbed: '/ds-copilote.html',
   },
+]
+
+const _unused = [
   {
     slug: 'luminal-wealth',
     image: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=800',
