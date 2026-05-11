@@ -13,7 +13,9 @@
       "WebFetch(domain:api.anthropic.com)",
       "Bash(cp \"C:/Users/roman/.claude/projects/d--romain-gabas-portfolio/e003004e-cc43-461b-8f33-9ca7556f2db3/tool-results/ds-test/project/tokens.css\" \"d:/romain-gabas-portfolio/public/ds-tokens.css\")",
       "Bash(cp \"C:/Users/roman/.claude/projects/d--romain-gabas-portfolio/e003004e-cc43-461b-8f33-9ca7556f2db3/tool-results/ds-test/project/styles.css\" \"d:/romain-gabas-portfolio/public/ds-styles.css\")",
-      "Bash(cp \"C:/Users/roman/.claude/projects/d--romain-gabas-portfolio/e003004e-cc43-461b-8f33-9ca7556f2db3/tool-results/ds-test/project/Copilote Design System.html\" \"d:/romain-gabas-portfolio/public/ds-copilote.html\")"
+      "Bash(cp \"C:/Users/roman/.claude/projects/d--romain-gabas-portfolio/e003004e-cc43-461b-8f33-9ca7556f2db3/tool-results/ds-test/project/Copilote Design System.html\" \"d:/romain-gabas-portfolio/public/ds-copilote.html\")",
+      "WebFetch(domain:www.reddit.com)",
+      "WebFetch(domain:old.reddit.com)"
     ],
     "additionalDirectories": [
       "d:\\",
