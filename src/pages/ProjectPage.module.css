@@ -5,7 +5,10 @@
   position: relative;
   font-family: 'Inter', sans-serif;
   color: #ffffff;
-  background: #0a0a0c;
+  background:
+    radial-gradient(ellipse 80vw 80vh at -10% -20%, rgba(62, 100, 166, 0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 70vw 70vw at 110% 120%, rgba(46, 76, 56, 0.15) 0%, transparent 70%),
+    #0a0a0c;
 }
 
 .page::-webkit-scrollbar { display: none; }
