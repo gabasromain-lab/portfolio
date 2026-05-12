@@ -109,11 +109,6 @@ export default function ProjectPage() {
 
   return (
     <div className={styles.page} ref={containerRef}>
-      <div className={styles.ambientBg}>
-        <div className={`${styles.orb} ${styles.orb1}`} />
-        <div className={`${styles.orb} ${styles.orb2}`} />
-      </div>
-
       <div className={styles.overlay}>
         <button className={styles.exitBtn} onClick={() => navigate('/')}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
