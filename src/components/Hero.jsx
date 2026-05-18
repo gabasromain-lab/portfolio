@@ -41,17 +41,17 @@ export default function Hero() {
             <div className={styles.specialtiesList}>
               <div className={styles.specialty}>
                 <span className={styles.specialtyIcon}>📱</span>
-                <span className={styles.specialtyName}>Mobile UI</span>
+                <span className={styles.specialtyName}>Mobile Design</span>
+              </div>
+              <div className={styles.specialtyDivider} />
+              <div className={styles.specialty}>
+                <span className={styles.specialtyIcon}>🖥️</span>
+                <span className={styles.specialtyName}>Desktop Design</span>
               </div>
               <div className={styles.specialtyDivider} />
               <div className={styles.specialty}>
                 <span className={styles.specialtyIcon}>🧩</span>
                 <span className={styles.specialtyName}>Design System</span>
-              </div>
-              <div className={styles.specialtyDivider} />
-              <div className={styles.specialty}>
-                <span className={styles.specialtyIcon}>⚡</span>
-                <span className={styles.specialtyName}>Prototyping</span>
               </div>
             </div>
           </div>
