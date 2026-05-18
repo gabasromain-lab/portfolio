@@ -61,8 +61,7 @@
 .bento {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
   max-width: 420px;
 }
@@ -71,8 +70,8 @@
 .card {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 24px;
+  border-radius: 18px;
+  padding: 18px;
   transition: background 0.2s, border-color 0.2s;
 }
 .card:hover {
@@ -126,7 +125,7 @@
 }
 .xpNum {
   font-family: var(--font-display);
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   color: #ffffff;
   line-height: 1;
@@ -195,7 +194,7 @@
   overflow: hidden;
   border-radius: 20px;
   position: relative;
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 16 / 6;
   cursor: pointer;
 }
 .projectThumb {

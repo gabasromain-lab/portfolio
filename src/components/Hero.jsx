@@ -21,7 +21,7 @@ export default function Hero() {
       <div className={styles.right}>
         <div className={styles.bento}>
 
-          {/* Open to work */}
+          {/* Row 1: Status | XP */}
           <div className={`${styles.card} ${styles.cardStatus}`}>
             <div className={styles.statusRow}>
               <span className={styles.statusDot} />
@@ -30,13 +30,12 @@ export default function Hero() {
             <p className={styles.statusSub}>CDI · Freelance · Paris & remote</p>
           </div>
 
-          {/* Experience */}
           <div className={`${styles.card} ${styles.cardXp}`}>
             <span className={styles.xpNum}>6+</span>
             <span className={styles.xpLabel}>Years of<br/>experience</span>
           </div>
 
-          {/* Tools */}
+          {/* Row 2: Tools (full width) */}
           <div className={`${styles.card} ${styles.cardTools}`}>
             <span className={styles.cardEyebrow}>Tools</span>
             <div className={styles.toolsList}>
@@ -46,19 +45,13 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Project preview */}
+          {/* Row 3: Project preview (full width) */}
           <div className={`${styles.card} ${styles.cardProject}`}>
             <img src="/mockups/cover_secure.png" alt="Secure Rider" className={styles.projectThumb} />
             <div className={styles.projectInfo}>
               <span className={styles.projectName}>Secure Rider</span>
               <span className={styles.projectType}>UI Design · Coyote</span>
             </div>
-          </div>
-
-          {/* Location */}
-          <div className={`${styles.card} ${styles.cardLocation}`}>
-            <span className={styles.locationIcon}>📍</span>
-            <span className={styles.locationText}>Paris,<br/>France</span>
           </div>
 
         </div>
