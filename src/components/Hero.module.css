@@ -55,7 +55,7 @@
 .right {
   display: flex;
   align-items: center;
-  transform: translateX(20%);
+  transform: translateX(8%);
 }
 
 .bento {
