@@ -35,7 +35,28 @@ export default function Hero() {
             <span className={styles.xpLabel}>Years of<br/>experience</span>
           </div>
 
-          {/* Row 2: Tools (full width) */}
+          {/* Row 2: Specialties */}
+          <div className={`${styles.card} ${styles.cardSpecialties}`}>
+            <span className={styles.cardEyebrow}>What I design</span>
+            <div className={styles.specialtiesList}>
+              <div className={styles.specialty}>
+                <span className={styles.specialtyIcon}>📱</span>
+                <span className={styles.specialtyName}>Mobile UI</span>
+              </div>
+              <div className={styles.specialtyDivider} />
+              <div className={styles.specialty}>
+                <span className={styles.specialtyIcon}>🧩</span>
+                <span className={styles.specialtyName}>Design System</span>
+              </div>
+              <div className={styles.specialtyDivider} />
+              <div className={styles.specialty}>
+                <span className={styles.specialtyIcon}>⚡</span>
+                <span className={styles.specialtyName}>Prototyping</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 3: Tools (full width) */}
           <div className={`${styles.card} ${styles.cardTools}`}>
             <span className={styles.cardEyebrow}>Tools</span>
             <div className={styles.toolsList}>
