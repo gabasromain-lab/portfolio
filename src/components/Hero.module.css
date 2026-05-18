@@ -1,12 +1,12 @@
 .hero {
-  min-height: 85vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
   padding: 0 8%;
   color: white;
   position: relative;
-  gap: 56px;
+  gap: 60px;
 }
 
 /* ── LEFT ── */
@@ -54,7 +54,7 @@
 /* ── RIGHT: BENTO ── */
 .right {
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
 .bento {
@@ -259,12 +259,9 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; height: auto; padding: 100px 8% 60px; }
+  .right { display: none; }
   .hero h1 { font-size: 64px; }
-  .bento { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 768px) {
-  .bento { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
