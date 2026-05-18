@@ -160,7 +160,6 @@
 
 /* Specialties card */
 .cardSpecialties {
-  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -168,41 +167,34 @@
 
 .specialtiesList {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .specialty {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  flex: 1;
+  gap: 10px;
 }
 
 .specialtyIcon {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1;
-}
-
-.specialtyName {
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(255,255,255,0.75);
-  text-align: center;
-}
-
-.specialtyDivider {
-  width: 1px;
-  height: 40px;
-  background: rgba(255,255,255,0.08);
   flex-shrink: 0;
 }
 
-/* Tools card — full width */
+.specialtyName {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+
+.specialtyDivider {
+  display: none;
+}
+
+/* Tools card */
 .cardTools {
-  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   gap: 14px;
