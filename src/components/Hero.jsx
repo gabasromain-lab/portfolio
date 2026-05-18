@@ -45,14 +45,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Row 3: Project preview (full width) */}
-          <div className={`${styles.card} ${styles.cardProject}`}>
-            <img src="/mockups/cover_secure.png" alt="Secure Rider" className={styles.projectThumb} />
-            <div className={styles.projectInfo}>
-              <span className={styles.projectName}>Secure Rider</span>
-              <span className={styles.projectType}>UI Design · Coyote</span>
-            </div>
-          </div>
 
         </div>
       </div>
