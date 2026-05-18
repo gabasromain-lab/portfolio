@@ -17,34 +17,50 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Right: mockup + status card */}
+      {/* Right: bento grid */}
       <div className={styles.right}>
-        <div className={styles.mockupWrap}>
-          <img
-            src="/UI%20screen/SurveillanceON-alerteOFF.png"
-            alt="Secure Rider app"
-            className={styles.mockupPhone}
-          />
-          <img
-            src="/UI%20screen/SurveillanceON-alerteON.png"
-            alt="Secure Rider app alert"
-            className={styles.mockupPhoneBehind}
-          />
+        <div className={styles.bento}>
 
-          {/* Status card */}
-          <div className={styles.statusCard}>
-            <div className={styles.statusDot} />
-            <div>
-              <div className={styles.statusTitle}>Open to work</div>
-              <div className={styles.statusSub}>Paris · CDI · Freelance</div>
+          {/* Open to work */}
+          <div className={`${styles.card} ${styles.cardStatus}`}>
+            <div className={styles.statusRow}>
+              <span className={styles.statusDot} />
+              <span className={styles.statusLabel}>Open to work</span>
+            </div>
+            <p className={styles.statusSub}>CDI · Freelance · Paris & remote</p>
+          </div>
+
+          {/* Experience */}
+          <div className={`${styles.card} ${styles.cardXp}`}>
+            <span className={styles.xpNum}>6+</span>
+            <span className={styles.xpLabel}>Years of<br/>experience</span>
+          </div>
+
+          {/* Tools */}
+          <div className={`${styles.card} ${styles.cardTools}`}>
+            <span className={styles.cardEyebrow}>Tools</span>
+            <div className={styles.toolsList}>
+              {['Figma', 'Sketch', 'Zeroheight', 'Jira', 'Notion', 'Principle'].map(t => (
+                <span key={t} className={styles.toolTag}>{t}</span>
+              ))}
             </div>
           </div>
 
-          {/* XP badge */}
-          <div className={styles.xpBadge}>
-            <span className={styles.xpNum}>6+</span>
-            <span className={styles.xpLabel}>years of<br/>experience</span>
+          {/* Project preview */}
+          <div className={`${styles.card} ${styles.cardProject}`}>
+            <img src="/mockups/cover_secure.png" alt="Secure Rider" className={styles.projectThumb} />
+            <div className={styles.projectInfo}>
+              <span className={styles.projectName}>Secure Rider</span>
+              <span className={styles.projectType}>UI Design · Coyote</span>
+            </div>
           </div>
+
+          {/* Location */}
+          <div className={`${styles.card} ${styles.cardLocation}`}>
+            <span className={styles.locationIcon}>📍</span>
+            <span className={styles.locationText}>Paris,<br/>France</span>
+          </div>
+
         </div>
       </div>
 
